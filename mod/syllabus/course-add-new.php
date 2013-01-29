@@ -62,9 +62,56 @@ global $CFG, $DB;
                         <label for="section">Section*</label>
                         <input class="required" type="text" maxlength="7" name="section_no" value="" /><br />
                         <label for="year">Year</label>
-                        <input disabled="disabled" type="text" value="<?php echo $result[$syllabusid]->year; ?>" /><br />
+                        <select name="year"><br/>
+                        <?php 
+                        $now = date('Y') -3;
+                        $years[$now] = $now;
+                        for ($i=0; $i <= 9; $i++) {
+                            $now = $now + 1;
+                            $years[$now] = $now;
+                            
+                            }
+		
+                        
+                        foreach($years as $key => $value) {
+                            if ($value == $result[$syllabusid]->year) {
+                                echo '<option selected="selected">'.$value.'</option>';
+                            } else {
+                                echo '<option>'.$value.'</option>';
+                            }                                
+                        }
+                        ?>
+                        </select><br />
                         <label for="semester">Semester</label>
-                        <input disabled="disabled" type="text" value="<?php echo $result[$syllabusid]->semester; ?>" /><br />
+                        <select name="semester">
+                            <?php
+                            $semesters = array(
+                                'FALL',
+                                'FALL 1st 8 weeks',
+                                'FALL 2nd 8 weeks',
+                                'FALL 1st 4 weeks',
+                                'FALL 2nd 4 weeks',
+                                'FALL 3rd 4 weeks',
+                                'FALL 4th 4 weeks',
+                                'SPRING',
+                                'SPRING A',
+                                'SPRING B',
+                                'SUMMER',
+                                'SUMMER A',
+                                'SUMMER B',
+                                'SUMMER C');
+                            
+                            foreach($semesters as $key => $value) {
+                                if($value == $result[$syllabusid]->semester) {
+                                    echo '<option selected="selected">'.$value.'</option>';
+                                } else {
+                                    echo '<option>'.$value.'</option>';
+                                }
+                            }
+                            
+                            ?>
+                            
+                        </select><br/>
                         <label for="instructor_name">Instructor Name*</label>
                         <input class="required" type="text" name="instructor_name" /><br />
                         <label for="instructor_email">Instructor Email*</label>

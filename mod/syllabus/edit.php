@@ -251,9 +251,9 @@ if(empty($course)) {
                     if($syllabusid == $selected) {
                         echo '<em>Selected</em>';
                    } else {
-                        echo '<a href="course-select.php?syllabusid='.$syllabusid.'&course_id='.$courseid.'&instance_id='.$instance_id.'">Select</a>'; 
+                        echo '<a href="course-select.php?syllabusid='.$syllabusid.'&course_id='.$course.'&instance_id='.$instance_id.'">Select</a>'; 
                    }
-                    echo ' | <a href="course-edit.php?syllabusid='.$syllabusid.'&course_id='.$courseid.'&instance_id='.$instance_id.'">Edit</a> | <a class="delete-course" href="course-delete.php?syllabusid='.$syllabusid.'&course_id='.$courseid.'&instance_id='.$instance_id.'">Delete</a></td></tr>';
+                    echo ' | <a href="course-edit.php?syllabusid='.$syllabusid.'&course_id='.$course.'&instance_id='.$instance_id.'">Edit</a> | <a class="delete-course" href="course-delete.php?syllabusid='.$syllabusid.'&course_id='.$course.'&instance_id='.$instance_id.'">Delete</a></td></tr>';
                     $i++;
                 }
                 
@@ -352,9 +352,9 @@ if(empty($course)) {
                     if($syllabusid == $selected) {
                         echo '<em>Selected</em>';
                    } else {
-                        echo '<a href="course-select.php?syllabusid='.$syllabusid.'&course_id='.$courseid.'&instance_id='.$instance_id.'">Select</a>'; 
+                        echo '<a href="course-select.php?syllabusid='.$syllabusid.'&course_id='.$course.'&instance_id='.$instance_id.'">Select</a>'; 
                    }
-                    echo ' | <a href="course-edit.php?syllabusid='.$syllabusid.'&course_id='.$courseid.'&instance_id='.$instance_id.'">Edit</a> | <a class="delete-course" href="course-delete.php?syllabusid='.$syllabusid.'&course_id='.$courseid.'&instance_id='.$instance_id.'">Delete</a></td></tr>';
+                    echo ' | <a href="course-edit.php?syllabusid='.$syllabusid.'&course_id='.$course.'&instance_id='.$instance_id.'">Edit</a> | <a class="delete-course" href="course-delete.php?syllabusid='.$syllabusid.'&course_id='.$course.'&instance_id='.$instance_id.'">Delete</a></td></tr>';
                     $i++;
                 }
                 

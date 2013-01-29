@@ -63,7 +63,7 @@ global $CFG, $DB;
                         <label for="year">Year</label>
                         <select name="year"><br/>
                         <?php 
-                        $now = date('Y');
+                        $now = date('Y') -3;
                         $years[$now] = $now;
                         for ($i=0; $i <= 9; $i++) {
                             $now = $now + 1;
