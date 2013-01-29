@@ -1,0 +1,40 @@
+.holder2 {position:relative; z-index:100; margin:0 auto 200px auto; width:200px;}
+
+.holder {position:relative; z-index:100; }
+
+#wosc-vert-menu {border:1px solid #222; font-family:arial, sans-serif;
+border-radius:10px;
+box-shadow:0 0 5px rgba(0,0,0,0.7);
+position: relative;
+background:#dcd0a0;
+}
+#wosc-vert-menu, #wosc-vert-menu ul {padding:0; margin:0; list-style:none; width:200px;}
+#wosc-vert-menu ul {position:relative; z-index:-1;}
+#wosc-vert-menu li {position:relative; position:relative; z-index:100;}
+#wosc-vert-menu ul li {margin-top:-23px; /* -22px */
+-moz-transition:  0.5s;
+-ms-transition: 0.5s;
+-o-transition: 0.5s;
+-webkit-transition: 0.5s;
+transition: 0.5s;
+}
+#wosc-vert-menu li a {display:block; width:195px; padding-left:5px; background:#dcd0a0; color:#000; text-decoration:none; font-size:12px; font-weight:bold; line-height:25px; outline:0;}
+#wosc-vert-menu li a:first-child{border-radius:10px;}
+#wosc-vert-menu li a img {border:0; float:left; padding-right:5px;}
+#wosc-vert-menu li a.sub {background: #dcd0a0 url(http://moodle.wosc.edu/theme/simplespace/pix/down.gif) no-repeat 180px center;}
+#wosc-vert-menu li a + img {display:block; width:200px; height:25px; position:absolute; left:0; top:0; display:none; cursor:pointer; background:url(http://moodle.wosc.edu/theme/simplespace/pix/up.gif) no-repeat 180px center;}
+
+#wosc-vert-menu li a:hover {background-color:#EADCAB;}
+#wosc-vert-menu ul li a {background: #dcd0a0 url(http://moodle.wosc.edu/theme/simplespace/pix/sub.png) no-repeat 10px center; color:#666; font-size:11px; line-height:22px; padding-left:35px; width:165px;}
+#wosc-vert-menu ul li a.lastLink {background: #dcd0a0 url(http://moodle.wosc.edu/theme/simplespace/pix/sub-last.png) no-repeat 10px center;}
+#wosc-vert-menu ul li:hover a {background-color:#EADCAB; color:#000;}
+
+#wosc-vert-menu a.sub:focus {outline:0;background:#EADCAB;}
+#wosc-vert-menu a:focus ~ ul li {margin-top:0;}
+#wosc-vert-menu a:focus + img {display:block;}
+
+#wosc-vert-menu a.sub:active {outline:0;background:#EADCAB;}
+#wosc-vert-menu a:active ~ ul li {margin-top:0;}
+#wosc-vert-menu a:active + img {display:block;}
+
+#wosc-vert-menu ul:hover li {margin-top:0;}

@@ -1,0 +1,111 @@
+/**set body font style, link color, etc. **/
+html,body {
+background:#fff url([[setting:background]]);
+#background: url(http://dl.dropbox.com/u/179998/2.x-theme/backg2.jpg) 0 60px repeat-x;
+}
+
+/** og color #0e53a7 **/
+html a,body a {
+color:[[setting:linkcolor]];
+}
+div.yui3-menu.custom_menu_submenu .yui3-menu-content li a {
+color:[[setting:linkcolor]] !important;
+}
+/** og color #6899d3 **/
+html a:hover,body a:hover {
+color:[[setting:linkhover]];
+}
+
+/** Header, footer and container wraps **/
+#header-wrap {
+/** og color #0e53a7 **/
+background:[[setting:maincolor]] url([[pix:theme|tbar3]]) repeat-x;
+border-bottom:1px solid [[setting:maincolor]];
+}
+
+/** og color #4284d3 **/
+#textcontainer-wrap {
+border-bottom:1px solid [[setting:maincoloraccent]];
+}
+
+/** logo is below **/
+.thetitle {
+background:url([[setting:logo]]) no-repeat;
+background-position:0 45%;
+}
+
+/** og color #0e53a7 **/
+#ie6-container-wrap {
+#background:url([[pix:theme|tbac2]]);
+#background: (http://www.wosc.edu/img/transparent.png);
+#opacity:0.4;
+#filter:alpha(opacity=40); /* For IE8 and earlier */
+#border-top:3px solid [[setting:maincolor]];
+border-bottom:3px solid [[setting:maincolor]];
+}
+
+/** og color #0e53a7 **/
+#footer-container {
+border-top:1px solid [[setting:maincoloraccent]];
+}
+
+/** og color #a63c00 **/
+/** Main heading styles **/
+#region-main-mask .title h2, h2.headingblock,h2.main,h3.main,h2.main a, div.tabtree li a span {
+color:[[setting:headingcolor]];
+}
+
+/** og color #a68100 **/
+/**Block color styles **/
+.title h2, div.dockeditempanel_hd {
+color:[[setting:blockcolor]] !important;
+}
+
+/** og color #a63c00 **/
+/** Table Header **/
+table.rolecap .header,.generaltable .header,.forumheaderlist .header,.files .header,.editcourse .header,.logtable .header,#attempts .header,table#categoryquestions th {
+background:[[setting:headingcolor]] url([[pix:theme|alert-overlay]]) repeat-x;
+color:#fff !important;
+}
+
+/** Button Color **/
+ div.block_private_files.block button, .adminsearchform input[type="submit"], #searchform_button, .johncontrolsright input[type="submit"],div.forumaddnew input[type="submit"], #container2 input[type="button"] {
+background:#dfdfdf url([[pix:theme|alert-overlay]]) repeat-x;
+color:#333;
+}
+
+/** og color #a63c00 **/
+div.block_private_files.block button:hover, .adminsearchform input[type="submit"]:hover, #searchform_button:hover, .johncontrolsright input[type="submit"]:hover, div.forumaddnew input[type="submit"]:hover {
+background:[[setting:headingcolor]] url([[pix:theme|alert-overlay]]) repeat-x;
+color:#fff;
+}
+
+
+/** og color #ffe073 **/
+/** Forum post colors **/
+.forumpost .topic {
+background:[[setting:forumback]] url([[pix:theme|alert-overlay]]) repeat-x;
+}
+
+/** og color #04346c **/
+.forumpost .subject {
+color:[[setting:forumcolor]];
+}
+
+/** og color #04346c **/
+/** Calendar Color **/
+.calendarmonth.calendartable th {
+background:[[setting:forumcolor]] url([[pix:theme|alert-overlay]]) repeat-x !important;
+color:#fff;
+}
+
+/** og color #0e53a7 **/
+#dock {
+background:[[setting:maincolor]] url([[pix:theme|tbarDOCK]]) repeat-y;
+border-right: 1px solid [[setting:maincolor]];
+}
+/** og color #0e53a7 **/
+div.dockedtitle {
+border-bottom: 1px solid [[setting:maincolor]] !important;
+border-top: 1px solid [[setting:maincolor]] !important;
+}

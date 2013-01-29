@@ -1,0 +1,102 @@
+/* 
+    Document   : style
+    Created on : May 3, 2012, 3:45:03 PM
+    Author     : Micah
+    Description:
+        Styling the syllabus management area.
+*/
+
+root { 
+    display: block;
+}
+
+.syllabus-center {
+    text-align:center;
+}
+
+div.syllabus-form-tabs {
+    margin-left:20px;
+    margin-bottom: 5px;
+}
+
+span.syllabus-form-tab {
+    border-top: 1px solid black;
+    border-left: 1px solid black;
+    border-right: 1px solid black;
+    border-bottom: none;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    padding-left:5px;
+    padding-right:5px;
+    margin-right: 10px;
+    
+    z-index:-1;
+}
+
+span.syllabus-form-tab:hover {
+    background-color:#f1f1f1;
+    cursor:pointer;
+}
+
+span.syllabus-form-tab.selected {
+    font-weight:bold;
+    border-bottom: 1px solid #f1f1f1;
+    background-color: #f1f1f1;
+    z-index:1;
+}
+
+.syllabus-form-body {
+    border: 1px solid black;
+    background-color: #f1f1f1;
+    padding:20px;
+    margin-bottom:20px;
+}
+
+.syllabus-form-body input[type="text"], .syllabus-form-body select {
+    width:400px;
+}
+
+.syllabus-form-body label {
+    display:inline-block;
+    width:20%;
+    padding-bottom:10px;
+}
+
+#master-syllabus-add-new, #course-syllabus-add-new {
+    display:none;
+}
+
+button#add-new-master-syllabus-button {
+    margin: 0 5%;
+}
+
+
+table.syllabus-table {
+    margin:20px 5%;
+    width:90%;
+    border: 1px solid black;
+}
+
+table.syllabus-table tr.alt {
+    background-color:#e3e3e3;
+}
+
+table.syllabus-table tr.heading{
+    background-color:#999;
+}
+
+table.syllabus-table col {
+    border-right:1px solid black;
+}
+
+#course-syllabus-body {
+    display:none;
+}
+
+.textarea {
+    float:left;
+}
+
+.error {
+    color:red;
+}

@@ -1,0 +1,9 @@
+Moodle Syllabus Management Installation Instructions:
+
+1. Extract this zip file into the modules directory:
+
+/path/to/moodle/mod/
+
+2. In your Moodle site (as admin) go to Settings > Site administration > Notifications (you should, for most plugin types, get a message saying the plugin is installed)
+
+3. Test the plugin following the instructions in the accompanying 'Syllabus Management Documentation.pptx' file.

@@ -1,0 +1,116 @@
+/* Start of CMSMS style sheet 'ARIA - Western Menu' */
+
+/******* ALL *******/
+	#WesternMenu {
+		font-family: Verdana;
+		padding-left: 75px;
+		font-size: 85%;
+		margin-top: 25px;
+	}
+	#nav a { 
+		display: block;
+		text-decoration: none;
+		color: white;
+  		padding: 0 11px; 
+	}
+	#nav a:hover, #nav a:focus { 
+		background-color: transparent;
+  		color: gold !important;
+  		outline: none;
+	}
+/******* TOP LAYER *******/
+	ul.menubar {
+		margin: 0;
+		padding: 0 5px;
+		list-style: none;
+		font-size: 100%;
+	}
+	ul.menubar > li {
+		float: left;
+		display: inline; 
+  		position: relative;
+		margin: 0;
+		padding: 0; 
+  		border-left:1px solid #020;
+	}
+	ul.menubar li a{
+		border-left:1px solid #060;
+		text-shadow:1px 1px 3px #000,-1px 1px 3px #333;
+	}
+	ul.menubar a {
+    		color: white;
+	}
+	ul.menubar > li:first-child, ul.menubar > li:first-child>a{
+		border-left:0px solid #060;
+	}
+	ul.menubar > li:last-child, ul.menubar > li:last-child>a{
+		border-right:0px solid #060;
+	}
+/******* BOTTOM LAYER *******/
+	#nav ul.menu li a { 
+		text-decoration: none;
+		background-color: white;
+  		color: #666;
+		padding: 5px 18px;
+	}
+	#nav ul.menu li:last-child a { 
+		border-radius:0 0 7px 7px;-moz-border-radius:0 0 7px 7px;-webkit-border-radius:0 0 7px 7px;
+}
+	#nav ul.menu li a:hover, #nav ul.menu li a:focus { 
+		background-color: transparent;
+  		color: black !important;
+  		outline: none;
+	}
+	ul.menu>li:hover>a, ul.menu>li:focus>a { 
+		background-color: #dcd0a0 !important;
+  	color: black !important;
+  	outline: none;
+		background-image:-moz-linear-gradient(rgba(240, 240, 240, 1),rgba(226, 219, 197, 0.8));
+		background-image:-webkit-gradient(linear,left top,left bottom,from(#f2f2f2),to(#e4dfcf));
+  	filter:progid:DXImageTransform.Microsoft.gradient(startColorstr=#f2f2f2,endColorstr=#e4dfcf);
+	}
+	ul.menu {
+		position: absolute;
+		left: 0;
+		top: 1.6em;
+		display: none; 
+		list-style: none;
+		margin: 0;
+		padding: 5px 0 0 0;
+		font-weight: normal;
+		font-size: 90%;
+		border: 1px solid #555;
+		z-index: 1;
+	}
+	ul.menu {
+		background-color: gold;
+		background-image:-moz-linear-gradient(rgba(240, 240, 240, 1),rgba(226, 219, 197, 0.8));
+		background-image:-webkit-gradient(linear,left top,left bottom,from(#f2f2f2),to(#e4dfcf));
+		border-radius:0 0 7px 7px;
+		-moz-border-radius:0 0 7px 7px;
+		-webkit-border-radius:0 0 7px 7px;
+		box-shadow:0 0 12px rgba(0,0,0,0.6);
+		-moz-box-shadow:0 0 12px rgba(0,0,0,0.6);
+		-webkit-box-shadow:0 0 12px rgba(0,0,0,0.6);
+		filter:progid:DXImageTransform.Microsoft.gradient(startColorstr=#f2f2f2,endColorstr=#e4dfcf);
+}
+	ul.menu li {
+		float: none;
+		display: block;
+		white-space: nowrap;
+	}
+	li.menu-hover, li.menu-focus {
+		color: white;
+		outline: none;
+  
+	}
+	li.menu-hover > a, li.menu-focus > a { 
+		color: gold !important;
+		outline: none;	
+	}
+	#nav ul.menu a{
+		border-left:0px solid #060;
+		text-shadow:none;
+	}
+
+/* End of 'ARIA - Western Menu' */

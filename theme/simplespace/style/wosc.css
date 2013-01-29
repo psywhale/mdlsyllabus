@@ -1,0 +1,784 @@
+/* ########################################### */
+/* ########################################### */
+/* ########################################### */
+/* ########################################### */
+/* ########################################### */
+/* ########################################### */
+/* ################# WOSC Specific ############### */
+/* ########################################### */
+/* ########################################### */
+/* ########################################### */
+/* ########################################### */
+/* ########################################### */
+/* ########################################### */
+
+html,body {
+font-family: Verdana,"Helvetica Neue",Arial,Helvetica,sans-serif;
+margin:0;
+padding:0;
+}
+html,body,h1,h2,h3,h4,h5,h6,p,ul,ol,dl,input,textarea {
+        font-family: Verdana,"Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+
+.container_12
+{
+        margin-left: auto;
+        margin-right: auto;
+        width: 960px;
+        margin-left: 20px;
+        margin-right: auto;
+        width: 915px;
+}
+.grid_1, .grid_2, .grid_3, .grid_4, .grid_5, .grid_6, .grid_7, .grid_8, .grid_9, .grid_10, .grid_11, .grid_12 {
+        display: inline;
+        float: left;
+        position:relative;
+        margin-left: 10px;
+        margin-right: 10px;
+}
+.alpha {margin-left: 0;}
+.omega {margin-right: 0;}
+.container_12 .grid_1 {width: 60px;}
+.container_12 .grid_2 {width: 140px;}
+.container_12 .grid_3 {width: 220px;}
+.container_12 .grid_4 {width: 300px;}
+.container_12 .grid_5 {width: 940px;}
+.container_12 .grid_6 {width: 460px;}
+.container_12 .grid_7 {width: 540px;}
+.container_12 .grid_8 {width: 620px;}
+.container_12 .grid_9 {width: 700px;}
+.container_12 .grid_10 {width: 780px;}
+.container_12 .grid_11 {width: 860px;}
+.container_12 .grid_12 {width: 940px;}
+
+.headwrap {
+	background: url(http://www.wosc.edu/moodle2x/moodle2headerbg2.png) 0 -15px repeat-x; 
+	height: 157px;
+}
+.headwrap-bottom {
+height:136px;
+width:955px;
+margin:0 auto;
+background:url(http://www.wosc.edu/moodle2x/headwrap-menu-s.png) 70px bottom no-repeat;
+}
+.rightinfo {
+	margin: -155px 0 0 0;
+}
+.user a{
+font-family: segoe script,mv boli,Times,Verdana;
+font-size: 115%;
+}
+#ie6-container-wrap {
+	border-top: 0;
+	margin: -117px 0 0 0;
+#	border-bottom: 2px solid #004000;
+	background: url(http://www.wosc.edu/moodle2x/backg2.png) 0 -10px repeat;
+}
+#header-container {
+height:18px;
+background:none;
+}
+#header-inner {
+width:90%;
+min-width:920px;
+height:18px;
+margin:0 auto;
+}
+#headleft {
+float:left;
+height:18px;
+margin-left:5px;
+line-height:18px;
+font-size:10px;
+color:#bbb;
+}
+.headleft-time {
+position: absolute; 
+#left: 70%;
+width: 350px;
+margin:-17px 0 0 160px;
+#left: 21%;
+color: #999;
+font-size: 65%;
+}
+#textcontainer {
+clear:both;
+border:none;
+width:50%;
+#width:930px;
+height:120px;
+margin:0 auto;
+#margin: 0;
+}
+.innerrightinfo img.userpicture {
+width:68px;
+height:68px;
+float:right;
+border:3px ridge #040;
+background: transparent;
+margin-top:20px;
+padding:4px
+}
+.block {
+margin-top:0 !important;
+margin-bottom:5px !important;
+padding-top:0 !important;
+padding-bottom:0 !important;
+border:1px solid #004000;
+#border-left:1px solid #f2f2f2;
+#border-right:2px solid #f2f2f2;
+#border-top:1px solid #fff;
+}
+.block div.header {
+#background: #dcd0a0 url([[pix:theme|bback]]) repeat-x;
+background: #dcd0a0;
+background: #004000;
+margin-top:0 !important;
+margin-bottom:0 !important;
+padding-top:0 !important;
+min-height:33px;
+height:auto !important;
+height:33px;
+#border:1px solid #dadada;
+#border:1px solid #004000;
+border-bottom:1px solid #004000;
+}
+.block div.commands {
+#background:#dcd0a0 !important;
+#background:#004000 !important;
+#padding:4px;
+background:#004000 !important;
+background: -moz-linear-gradient(top,  #004000,  #006000) !important;
+filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#004000', endColorstr='#006000') !important;
+background: -webkit-gradient(linear, left top, left bottom, from(#004000), to(#006000)) !important; 
+padding: 4px 0 4px 10px !important; 
+margin-left: 0px !important;
+}
+.block div.commands a {
+padding-right:3px;
+margin-right:3px;
+}
+div .block .content {
+border: 0px solid #004000;
+}
+.logo h1 {
+float:left;
+color:#fff;
+text-shadow:1px 1px #000;
+margin-right:10px;
+margin-top:23px;
+}
+.logged-in a.logout {
+float:right;
+padding-left:15px;
+}
+.johndocs {
+float:right;
+height:15px;
+font-size:10px;
+margin-top:10px;
+margin-right:3px;
+}
+.johndocs a {
+font-weight:200;
+text-decoration:none;
+}
+.johndocsleft {
+float:left;
+height:15px;
+font-size:10px;
+margin-top:10px;
+margin-left:3px;
+#width:200px;
+}
+/** Button Color **/
+ div.block_private_files.block button, .adminsearchform input[type="submit"], #searchform_button, .johncontrolsright input[type="submit"],div.forumaddnew input[type="submit"], #container2 input[type="button"] {
+background:#004000 url([[pix:theme|alert-overlay]]) repeat-x;
+color:#eee;
+}
+div.block_private_files.block button:hover, .adminsearchform input[type="submit"]:hover, #searchform_button:hover, .johncontrolsright input[type="submit"]:hover, div.forumaddnew input[type="submit"]:hover{
+background:#002000 url(image.php?theme=simplespace&image=alert-overlay&rev=852&component=theme) repeat-x;
+color:#fff;
+}
+#container {
+width:98%;
+min-width:400px;
+font-size:1.4em;
+position:relative;
+min-height:600px;
+margin:0;
+padding:10px:
+background-color: white;
+}
+h3 .weekdates {
+border:1px solid #ccc;
+background:#fff;
+width:200px;
+font-size:11px !important;
+font-weight:200;
+text-transform:uppercase;
+text-align:center;
+margin-top:0px;
+margin-bottom:3px;
+margin-left:auto;
+margin-right:auto;
+padding:5px 20px
+}
+.region-content a{border-bottom: 1px dotted #ccc;}a:hover{border-bottom: 1px dotted transparent}
+.block li{border:0;}
+.block_myprofile div.myprofileitem.picture a img {
+width:65px;
+height:65px;
+background:transparent;
+border-top:1px solid #eee;
+border-left:1px solid #eee;
+border-right:1px solid #dadada;
+border-bottom:1px solid #ccc;
+padding:8px;
+}
+th.header{#background-color:#ffe073;color:#04346c;border-bottom:1px solid #999;
+background:#FFE896;background: -moz-linear-gradient(top,  #FFE896,  #FFE176);filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#FFE896', endColorstr='#FFE176');background: -webkit-gradient(linear, left top, left bottom, from(#FFE896), to(#FFE176));}
+.comment-list li {
+    background: #D1C498 !important;
+    list-style: none;
+    border-radius: 0 20px 0px 5px;
+    -moz-border-radius: 0 20px 0px 5px;
+    -webkit-border-radius: 0 20px 0px 5px;
+}
+
+
+.gradient-green {
+background:#004000;background: -moz-linear-gradient(top,  #006000,  #004000);filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#006000', endColorstr='#004000');background: -webkit-gradient(linear, left top, left bottom, from(#006000), to(#004000));
+}
+.gradient-gold {
+background:#FFE896;background: -moz-linear-gradient(top,  #FFE896,  #FFE176);filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#FFE896', endColorstr='#FFE176');background: -webkit-gradient(linear, left top, left bottom, from(#FFE896), to(#FFE176));
+}
+
+
+
+
+
+
+
+
+
+/* ########################################### */
+/* ########################################### */
+
+div#wosctopmenu {
+    width: 832px;
+    margin: -40px 0px 0px 0px;
+    float: right;
+}
+
+/******* MENU STRUCTURE *******/
+#main-nav{
+overflow:visible;
+}
+#main-nav ul.navigation{
+font-size:0;
+list-style:none;
+margin:0;
+padding:0;
+text-align:center;
+}
+#main-nav ul.navigation>li{
+border-left:1px solid #020;
+display:inline-block;
+position:relative
+}
+/******* END MENU STRUCTURE *******/
+
+/******* TOP LAYER *******/
+#main-nav ul.navigation>li>a{
+border-left:1px solid #060;
+color:#fff;
+display:block;
+font-size:12px;
+letter-spacing:1px;
+min-width:20px;
+outline:0;
+padding:4px 13px 6px;
+text-decoration:none;
+text-shadow:1px 1px 3px #000,-1px 1px 3px #333; 
+font-weight: normal;
+}
+#main-nav ul.navigation>li:hover>a{
+#background-image:-moz-linear-gradient(#050,#020);
+#background-image:-webkit-gradient(linear,left top,left bottom,from(#050),to(#020));
+#background-position:center top;
+#background-repeat:repeat-x;
+position:relative;
+z-index:110;
+border-bottom:0;
+color:#FDD017;  /** gold **/
+}
+#main-nav ul.navigation>li:hover>a[href="javascript:;"]{
+cursor:default;
+border-bottom:0;
+}
+#main-nav ul.navigation>li:first-child{
+border-left:0px solid #060;
+}
+#main-nav ul.navigation>li:first-child>a{
+border-left:0px solid #000;
+}
+#main-nav ul.navigation>li:last-child{
+border-right:0px solid #060;
+}
+#main-nav ul.navigation>li:last-child>a{
+border-right:0px solid #000;
+}
+/******* END TOP LAYER *******/
+
+/******* SUB LAYER *******/
+#main-nav ul.navigation>li>ul{
+background-color:rgb(255, 255, 255);
+background-color:rgba(255, 255, 255);
+background-image:-moz-linear-gradient(rgba(240, 240, 240, 0.8),rgba(226, 219, 197, 0.8));
+background-image:-webkit-gradient(linear,left top,left bottom,from(#f2f2f2),to(#e4dfcf));
+border-radius:0 0 7px 7px;
+-moz-border-radius:0 0 7px 7px;
+-webkit-border-radius:0 0 7px 7px;
+box-shadow:0 0 12px rgba(0,0,0,0.6);
+-moz-box-shadow:0 0 12px rgba(0,0,0,0.6);
+-webkit-box-shadow:0 0 12px rgba(0,0,0,0.6);
+display:none;filter:progid:DXImageTransform.Microsoft.gradient(startColorstr=#f2f2f2,endColorstr=#e4dfcf);
+list-style:none;
+margin:0;
+padding:0 0 4px;
+position:absolute;
+text-align:left;
+width:200px;
+z-index:100;
+text-shadow:0 0 0;
+z-index: 999999;
+}
+#main-nav ul.navigation>li:hover>ul{
+display:block;
+padding:9px 0 4px 0;
+z-index: 999999;
+border-bottom:0;
+}
+#main-nav ul.navigation>li>ul>li>a{
+color:#666;
+display:block;
+font-size:12px;
+font-weight:normal;
+padding:8px 12px;
+text-decoration:none;
+}
+#main-nav ul.navigation>li>ul>li>a:hover{
+background-color:rgb(255, 255, 255);
+background-color:rgba(255, 255, 255);
+background-image:-moz-linear-gradient(rgba(240, 240, 240, 0.8),rgba(226, 219, 197, 0.8));
+background-image:-webkit-gradient(linear,left top,left bottom,from(#f2f2f2),to(#e4dfcf));
+color:#000;
+font-weight:normal;
+border-bottom:0;
+}
+#main-nav ul.navigation>li>ul>li>a,#footer .last>a{
+transition:background-color .2s,color .2s;
+-moz-transition:background-color .2s,color .2s;
+-webkit-transition:background-color .2s,color .2s;
+}
+/******* END SUB LAYER *******/
+
+
+/**   color: #FDD017;  gold **/
+/**   text-shadow: 2px 2px 5px #444; **/
+/**   -moz-text-shadow:2px 2px 5px #444; **/
+/**   -webkit-text-shadow:2px 2px 5px #444; **/
+
+
+div#galleryviewborder {
+#  background: #C9BE95; /* old color */
+  background: url(http://www.wosc.edu/moodle2x/backg2.png) repeat-x;
+   padding: 5px;
+  -moz-box-shadow: 1px 1px 8px rgba(0,0,0,0.3);
+  -webkit-border-radius:19px;
+  -webkit-box-shadow: 1px 1px 8px rgba(0,0,0,0.3);
+  -moz-border-radius-topright: 19px;
+  -moz-border-radius-topleft: 19px;
+  -webkit-border-top-right-radius: 19px;
+  -webkit-border-top-left-radius: 19px;
+  -moz-border-radius-bottomleft: 19px;
+  -moz-border-radius-bottomright: 19px;
+  -webkit-border-bottom-left-radius: 19px;
+  -webkit-border-bottom-right-radius: 19px;
+  -ms-border-radius:19px;
+  -o-border-radius:19px;
+}
+DIV#ststeps {
+#background: url(http://www.wosc.edu/img/1st-steps.png) 0 4% no-repeat;
+background: url(http://www.wosc.edu/img/1st-steps.png) 0 4% no-repeat;
+width: 270px;
+height: 148px;
+}
+DIV#ststeps ol{
+margin: 13px 0 0 85px;
+}
+
+.photos h3 {
+	font-size: 1.45em;
+	line-height: 1.05em;
+	border-bottom: 1px solid #333;
+}
+}
+.panel-overlay h2,
+.panel-overlay p{
+	margin: .3em 0;
+}
+.panel-overlay p {
+	line-height: 1.4em;
+}
+.panel-overlay p a {
+  text-decoration: inherit;
+}
+.panel-overlay p a:hover {
+  color: gold;
+  text-decoration: none;
+}
+
+
+/* GALLERY LIST */
+/* IMPORTANT - Change '#photos' to the ID of your gallery list to prevent a flash of unstyled content */
+#photos { visibility: hidden; }
+
+/* GALLERY CONTAINER */
+.gallery { background: #DCD0A0; border: 1px solid #aaa; padding: 5px;}
+
+/* LOADING BOX */
+.loader { background: url(http://www.wosc.edu/uploads/slider/loader.gif) center center no-repeat #DCD0A0; }
+
+/* GALLERY PANELS */
+.panel {}
+
+/* DEFINE HEIGHT OF PANEL OVERLAY */
+/* NOTE - It is best to define padding here as well so overlay and background retain identical dimensions */
+.panel .panel-overlay,
+.panel .overlay-background { height: 60px; padding: 0 1em; }
+
+/* PANEL OVERLAY BACKGROUND */
+.panel .overlay-background { background: #DCD0A0; }
+
+/* PANEL OVERLAY CONTENT */
+.panel .panel-overlay { color: white; font-size: 0.7em; }
+.panel .panel-overlay a { color: white; text-decoration: underline; font-weight: bold; }
+
+/* FILMSTRIP */
+/* 'margin' will define top/bottom margin in completed gallery */
+.filmstrip { margin: 5px; }
+
+/* FILMSTRIP FRAMES (contains both images and captions) */
+.frame {}
+
+/* WRAPPER FOR FILMSTRIP IMAGES */
+.frame .img_wrap { border: 1px solid #aaa; }
+
+/* WRAPPER FOR CURRENT FILMSTRIP IMAGE */
+.frame.current .img_wrap { border-color: #fff; }
+
+/* FRAME IMAGES */
+.frame img { border: none; }
+
+/* FRAME CAPTION */
+.frame .caption { font-size: 11px; text-align: center; color: #888; }
+
+/* CURRENT FRAME CAPTION */
+.frame.current .caption { color: #000; }
+
+/* POINTER FOR CURRENT FRAME */
+.pointer {
+	border-color: #fff;
+}
+
+/* TRANSPARENT BORDER FIX FOR IE6 */
+/* NOTE - DO NOT CHANGE THIS RULE */
+*html .pointer {
+	filter: chroma(color=pink);
+}
+
+/* ########### Expanding Menu ########### */
+
+
+div.sdmenu {
+	width: 190px;
+	font-family: Arial, sans-serif;
+	font-size: 12px;
+	padding: 0px;
+#	background: url(http://www.wosc.edu/moodle2x/sdmenu/bottom.gif2) no-repeat  right bottom;
+	margin:4px 6px;
+	background: #dcd0a0;
+	background: -moz-linear-gradient(top,  #dcd0a0,  #D3C79A);
+	filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#dcd0a0', endColorstr='#D3C79A');
+	background: -webkit-gradient(linear, left top, left bottom, from(#dcd0a0), to(#D3C79A));
+	color: #FDD017;  /** gold **/
+	-moz-box-shadow:0 1px 2px rgba(0,0,0,0.3);
+	-moz-border-radius:10px;
+	-webkit-border-radius:10px;
+	border-radius:10px;
+	border:1px solid #666;
+	-webkit-box-shadow: 1px 1px 5px #444;
+        box-shadow: 1px 1px 5px #444;
+}
+div.sdmenu b {
+        font-size: 16px;
+        #padding-left: 35px;
+}
+div.sdmenu div {
+	#background: url(http://www.wosc.edu/moodle2x/sdmenu/Button_Group.jpg) repeat-x;
+	overflow: hidden;
+}
+
+div.sdmenu div:first-child {
+	#background: url(http://www.wosc.edu/moodle2x/sdmenu/Button_Group_Top.jpg) ;
+	-moz-border-top-radius:5px;
+	-webkit-border-top-radius:5px;
+	border-top-radius:5px;
+} 
+div.sdmenu div.collapsed {
+	height: 25px;
+}
+div.sdmenu div span {
+	display: block;
+	padding: 5px 25px;
+	font-weight: bold;
+	color: #000;  
+	background: url(http://www.wosc.edu/moodle2x/sdmenu/expanded.gif) no-repeat 10px center;
+	cursor: pointer;
+	#border-bottom: 1px solid #222;
+}
+div.sdmenu div span:hover { 
+	color: #00e;
+	background: url(http://www.wosc.edu/moodle2x/sdmenu/expanded.gif) no-repeat 10px center;
+
+}
+div.sdmenu div.collapsed span {
+	background-image: url(http://www.wosc.edu/moodle2x/sdmenu/collapsed.gif);
+}
+div.sdmenu .hidden span {
+	display: none;
+	height: 0px;
+}
+div.sdmenu div:hover {
+	cursor: pointer;
+}
+
+div.sdmenu div a {
+	padding: 5px 5px 5px 22px;
+	#background: url(http://www.wosc.edu/moodle2x/sdmenu/Button_Group.jpg);
+	display: block;
+	border-bottom: 0px solid #000;
+	color: #000;  /** gold **/
+	text-decoration: none;
+}
+div.sdmenu div a.current {
+	#background : #222;
+}
+div.sdmenu div a:hover {
+	background : #E2D5A5 url(http://www.wosc.edu/moodle2x/sdmenu/linkarrow.gif) no-repeat right center;
+	color: #00e;
+	text-decoration: none;
+}
+
+
+
+
+/* #Reset & Basics 
+================================================== */
+	blockquote, q {
+		quotes: none; }
+	blockquote:before, blockquote:after,
+	q:before, q:after {
+		content: '';
+		content: none; }
+		
+/* #Typography
+================================================== */
+	h1, h2, h3, h4, h5, h6 {
+		#color: #181818;
+		font-family: "Georgia", "Times New Roman", Helvetica, Arial, sans-serif;
+		font-weight: normal; }
+	h1 a, h2 a, h3 a, h4 a, h5 a, h6 a { font-weight: inherit; }
+	h1 { font-size: 46px; line-height: 50px; margin-bottom: 14px;}
+	h2 { font-size: 35px; line-height: 40px; margin-bottom: 10px; }
+	h3 { font-size: 28px; line-height: 34px; margin-bottom: 8px; }
+	h4 { font-size: 21px; line-height: 30px; margin-bottom: 4px; }
+	h5 { font-size: 17px; line-height: 24px; }
+	h6 { font-size: 14px; line-height: 21px; }
+	.subheader { #color: #777; }
+
+	p { margin: 0 0 20px 0; }
+	p img { margin: 0; }
+	p.lead { font-size: 21px; line-height: 27px; #color: #777;  }
+
+	em { font-style: italic; }
+	strong { font-weight: bold; #color: #333; }
+	small { font-size: 80%; }
+
+/*	Blockquotes  */
+	blockquote, blockquote p { font-size: 17px; line-height: 24px; #color: #777; font-style: italic; }
+	blockquote { margin: 0 0 20px; padding: 9px 20px 0 19px; border-left: 1px solid #ddd; }
+	blockquote cite { display: block; font-size: 12px; color: #555; }
+	blockquote cite:before { content: "\2014 \0020"; }
+	blockquote cite a, blockquote cite a:visited, blockquote cite a:visited { #color: #555; }
+
+	hr { border: solid #ddd; border-width: 1px 0 0; clear: both; margin: 10px 0 30px; height: 0; }
+
+
+/* #Links
+================================================== */
+	a, a:visited { #color: #333; text-decoration: underline; outline: 0; }
+	a:hover, a:focus { #color: #000; }
+	p a, p a:visited { line-height: inherit; }
+
+
+/* #Lists
+================================================== 
+	ul, ol { margin-bottom: 20px; }
+	ul { list-style: none outside; }
+	ol { list-style: decimal; }
+	ol, ul.square, ul.circle, ul.disc { margin-left: 30px; }
+	ul.square { list-style: square outside; }
+	ul.circle { list-style: circle outside; }
+	ul.disc { list-style: disc outside; }
+	ul ul, ul ol,
+	ol ol, ol ul { margin: 4px 0 5px 30px; font-size: 90%;  }
+	ul ul li, ul ol li,
+	ol ol li, ol ul li { margin-bottom: 6px; }
+	li { line-height: 18px; margin-bottom: 12px; }
+	ul.large li { line-height: 21px; }
+	li p { line-height: 21px; }
+	*/
+	
+	
+/* ==|== print styles =======================================================
+   Print styles.
+   Inlined to avoid required HTTP connection: h5bp.com/r
+   ========================================================================== */
+
+@media print {
+  * { background: transparent !important; color: black !important; box-shadow:none !important; text-shadow: none !important; filter:none !important; -ms-filter: none !important; } /* Black prints faster: h5bp.com/s */
+  a, a:visited { text-decoration: underline; }
+/*  a[href]:after { content: " (" attr(href) ")"; }*
+  abbr[title]:after { content: " (" attr(title) ")"; }
+  .ir a:after, a[href^="javascript:"]:after, a[href^="#"]:after { content: ""; }   Don't show links for images, or javascript/internal links */
+  pre, blockquote { border: 1px solid #999; page-break-inside: avoid; }
+  thead { display: table-header-group; } /* h5bp.com/t */
+  tr, img { page-break-inside: avoid; }
+  img { max-width: 100% !important; }
+  @page { margin: 0.5cm; }
+  p, h2, h3 { orphans: 3; widows: 3; }
+  h2, h3 { page-break-after: avoid; }
+}
+.contentafterlink {margin-bottom:-10px;}
+/*.no-overflow {margin-bottom:-10px;} */
+
+.button-blue {
+        -moz-box-shadow:inset 0px 1px 0px 0px #cae3fc;
+        -webkit-box-shadow:inset 0px 1px 0px 0px #cae3fc;
+        box-shadow:inset 0px 1px 0px 0px #cae3fc;
+        background:-webkit-gradient( linear, left top, left bottom, color-stop(0.05, #79bbff), color-stop(1, #4197ee) );
+        background:-moz-linear-gradient( center top, #79bbff 5%, #4197ee 100% );
+        #filter:progid:DXImageTransform.Microsoft.gradient(startColorstr="#79bbff", endColorstr="#4197ee");
+        background-color:#79bbff;
+        -moz-border-radius:6px;
+        -webkit-border-radius:6px;
+        border-radius:6px;
+        border:1px solid #469df5;
+        display:inline-block;
+        color:#ffffff;
+        font-family:Verdana;
+        font-size:14px;
+        font-weight:bold;
+        padding:6px 32px;
+        margin: 15px;
+        text-decoration:none;
+        text-shadow:2px 2px 4px #287ace;
+}.button-blue:hover, .button-blue:focus {
+        background:-webkit-gradient( linear, left top, left bottom, color-stop(0.05, #4197ee), color-stop(1, #79bbff) );
+        background:-moz-linear-gradient( center top, #4197ee 5%, #79bbff 100% );
+        #filter:progid:DXImageTransform.Microsoft.gradient(startColorstr="#4197ee", endColorstr="#79bbff");
+        background-color:#4197ee;
+        color:white; text-decoration: none;
+}.button-blue:active {
+        position:relative;
+        top:1px;
+}
+.button-green {
+	-moz-box-shadow:inset 0px 1px 0px 0px #a4e271;
+	-webkit-box-shadow:inset 0px 1px 0px 0px #a4e271;
+	box-shadow:inset 0px 1px 0px 0px #a4e271;
+	background:-webkit-gradient( linear, left top, left bottom, color-stop(0.05, #89c403), color-stop(1, #638c03) );
+	background:-moz-linear-gradient( center top, #89c403 5%, #638c03 100% );
+	#filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#89c403', endColorstr='#638c03');
+	background-color:#89c403;
+	-moz-border-radius:6px;
+	-webkit-border-radius:6px;
+	border-radius:6px;
+	border:1px solid #74b807;
+	display:inline-block;
+	color:#ffffff;
+	font-family:Verdana;
+	font-size:14px;
+	font-weight:bold;
+	padding:6px 32px;
+	margin: 15px;
+	text-decoration:none;
+	text-shadow:2px 2px 4px #528009;
+}.button-green:hover, .button-green:focus {
+	background:-webkit-gradient( linear, left top, left bottom, color-stop(0.05, #638c03), color-stop(1, #89c403) );
+	background:-moz-linear-gradient( center top, #638c03 5%, #89c403 100% );
+	#filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#638c03', endColorstr='#89c403');
+	background-color:#638c03;
+	color:white; text-decoration: none;
+}.button-green:active {
+        position:relative;
+        top:1px;
+}
+div#sch-border {
+        background:-webkit-gradient( linear, left top, left bottom, color-stop(0.05, #E2DBBE), color-stop(1, #dcd0a0) );
+        background:-moz-linear-gradient( center top, #E2DBBE 5%, #dcd0a0 100% );
+        filter:progid:DXImageTransform.Microsoft.gradient(startColorstr="#E2DBBE", endColorstr="#dcd0a0");
+        background-color:#dcd0a0;
+        -moz-border-radius:8px;
+        -webkit-border-radius:8px;
+        border-radius:8px;
+        border: 2px ridge #dcd0a0;
+        -moz-box-shadow: inset 0 0 15px #CEC298;
+        -webkit-box-shadow: inset 0 0 15px #CEC298;
+        box-shadow: inset 0 0 15px #CEC298;
+        -o-box-shadow: inset 0 0 15px #CEC298;
+        -ms-box-shadow: inset 0 0 15px #CEC298;
+}
+
+
+.instructorvid, .woscyoutube, .youtube {
+padding:10px;
+border: 2px ridge #dcd0a0;
+background-color: black;
+-moz-border-radius: 10px;-webkit-border-radius: 10px;border-radius: 10px;-o-border-radius: 10px;-ms-border-radius: 10px;
+-moz-box-shadow: inset 0 0 15px #CEC298;
+-webkit-box-shadow: inset 0 0 15px #CEC298;
+box-shadow: inset 0 0 15px #CEC298;
+-o-box-shadow: inset 0 0 15px #CEC298;
+-ms-box-shadow: inset 0 0 15px #CEC298;
+}
+
+.transparent {
+	zoom: 1;
+	filter: alpha(opacity=40);
+	opacity: 0.4;
+#	filter: grayscale(100%);
+#	-webkit-filter: grayscale(100%);
+#	-moz-filter: grayscale(100%);
+#	-ms-filter: grayscale(100%);
+#	-o-filter: grayscale(100%);
+}
+.transparent2:hover{
+	zoom: 0;
+	filter: alpha(opacity=100);
+	opacity: 1;
+}
