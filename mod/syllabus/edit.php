@@ -87,11 +87,11 @@ if(empty($course)) {
                 
                     if($i % 2 == 0) {
                     
-                        echo '<tr class="alt"><td>'.$course_number.'</td><td>'.$year.'</td><td>'.$semester.'</td><td class="syllabus-center"><a href="master-edit.php?syllabusid='.$syllabusid.'&course_id='.$course.'&instance_id='.$instance_id.'">Edit</a> | <a class="delete-master" href="master-delete.php?syllabusid='.$syllabusid.'&course_id='.$courseid.'&instance_id='.$instance_id.'">Delete</a></td></tr>';
+                        echo '<tr class="alt"><td>'.$course_number.'</td><td>'.$year.'</td><td>'.$semester.'</td><td class="syllabus-center"><a href="master-edit.php?syllabusid='.$syllabusid.'&course_id='.$course.'&instance_id='.$instance_id.'">Edit</a> | <a class="delete-master" href="master-delete.php?syllabusid='.$syllabusid.'&course_id='.$course.'&instance_id='.$instance_id.'">Delete</a></td></tr>';
                         
                     } else {
                         
-                        echo '<tr><td>'.$course_number.'</td><td>'.$year.'</td><td>'.$semester.'</td><td class="syllabus-center"><a href="master-edit.php?syllabusid='.$syllabusid.'&course_id='.$course.'&instance_id='.$instance_id.'">Edit</a> | <a class="delete-master" href="master-delete.php?syllabusid='.$syllabusid.'&course_id='.$courseid.'&instance_id='.$instance_id.'">Delete</a></td></tr>';                                            
+                        echo '<tr><td>'.$course_number.'</td><td>'.$year.'</td><td>'.$semester.'</td><td class="syllabus-center"><a href="master-edit.php?syllabusid='.$syllabusid.'&course_id='.$course.'&instance_id='.$instance_id.'">Edit</a> | <a class="delete-master" href="master-delete.php?syllabusid='.$syllabusid.'&course_id='.$course.'&instance_id='.$instance_id.'">Delete</a></td></tr>';                                            
                     }
                     
                     $i++;

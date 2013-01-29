@@ -60,60 +60,8 @@ global $CFG, $DB;
                         <input type="text" class="required" name="department" value="<?php echo $result[$syllabusid]->department; ?>" /><br />
                         <label for="title">Course Title <a href="#" title="Help with course titles." onclick="alert('This field should only be changed if the course name has been changed in Moodle.')"><img src="<?php echo $OUTPUT->pix_url('help', 'moodle'); ?>" alt="Help with course titles." /></a></label>
                         <input type="text" name="title" value="<?php echo $result[$syllabusid]->title; ?>" /><br />
-                        <?php
-		$now = date('Y');
-		
-		$years[$now] = $now;
-		
-		for ($i=0; $i <= 9; $i++) {
-			
-			$now = $now + 1;
-			
-			$years[$now] = $now;
-		}
-		?>
-                        <label for="year">Year</label>
-                        <select name="year"><br/>
-                        <?php
-                        foreach($years as $key => $value) {
-                            if ($value == $result[$syllabusid]->year) {
-                                echo '<option selected="selected">'.$value.'</option>';
-                            } else {
-                                echo '<option>'.$value.'</option>';
-                            }                                
-                        }
-                        ?>
-                        </select><br />
-                        <label for="semester">Semester</label>
-                        <select name="semester">
-                            <?php
-                            $semesters = array('FALL',
-                                'FALL',
-                                'FALL 1st 8 weeks',
-                                'FALL 2nd 8 weeks',
-                                'FALL 1st 4 weeks',
-                                'FALL 2nd 4 weeks',
-                                'FALL 3rd 4 weeks',
-                                'FALL 4th 4 weeks',
-                                'SPRING',
-                                'SPRING A',
-                                'SPRING B',
-                                'SUMMER',
-                                'SUMMER A',
-                                'SUMMER B',
-                                'SUMMER C');
-                            
-                            foreach($semesters as $key => $value) {
-                                if($value == $result[$syllabusid]->semester) {
-                                    echo '<option selected="selected">'.$value.'</option>';
-                                } else {
-                                    echo '<option>'.$value.'</option>';
-                                }
-                            }
-                            
-                            ?>
-                            
-                        </select><br />
+
+<br />
                 
                         <label for="credits">Credits*</label>
                         <input type="text" class="required" name="credits" value="<?php echo $result[$syllabusid]->credits; ?>" /><br />
