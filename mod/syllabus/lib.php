@@ -278,4 +278,30 @@ function syllabus_supports($feature) {
         default: return null;
     }
 }
-
+/**
+ * @return array
+ * 
+ */
+function syllabus_get_semesters() {
+   $semesters = array(
+   'FALL',
+   'FALL 1st 8 weeks',
+   'FALL 2nd 8 weeks',
+   'FALL 1st 4 weeks',
+   'FALL 2nd 4 weeks',
+   'FALL 3rd 4 weeks',
+   'FALL 4th 4 weeks',
+   'SPRING',
+   'SPRING 1st 8 weeks',
+   'SPRING 2nd 8 weeks',
+   'SPRING 1st 4 weeks',
+   'SPRING 2nd 4 weeks',
+   'SPRING 3rd 4 weeks',
+   'SPRING 4th 4 weeks',
+   'SUMMER',
+   'SUMMER 1st 4 weeks',
+   'SUMMER 2nd 4 weeks'
+   );
+                            
+return $semesters;
+}

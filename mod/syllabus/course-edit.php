@@ -70,7 +70,15 @@ global $CFG, $DB;
                             $years[$now] = $now;
                             
                             }
-		
+                        // if no year grab from master 
+                        if(!$result[$syllabusid]->year) {
+                            $result[$syllabusid]->year = $masterresult[$mastersyllabusid]->year;
+                        }
+                        if(!$result[$syllabusid]->semester) {
+                            $result[$syllabusid]->semester = $masterresult[$mastersyllabusid]->semester;
+                        }
+                            
+		   
                         
                         foreach($years as $key => $value) {
                             if ($value == $result[$syllabusid]->year) {
@@ -84,21 +92,7 @@ global $CFG, $DB;
                         <label for="semester">Semester</label>
                         <select name="semester">
                             <?php
-                            $semesters = array(
-                                'FALL',
-                                'FALL 1st 8 weeks',
-                                'FALL 2nd 8 weeks',
-                                'FALL 1st 4 weeks',
-                                'FALL 2nd 4 weeks',
-                                'FALL 3rd 4 weeks',
-                                'FALL 4th 4 weeks',
-                                'SPRING',
-                                'SPRING A',
-                                'SPRING B',
-                                'SUMMER',
-                                'SUMMER A',
-                                'SUMMER B',
-                                'SUMMER C');
+                           $semesters = syllabus_get_semesters();
                             
                             foreach($semesters as $key => $value) {
                                 if($value == $result[$syllabusid]->semester) {

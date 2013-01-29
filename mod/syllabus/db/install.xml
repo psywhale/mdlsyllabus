@@ -1,18 +1,18 @@
 <?xml version="1.0" encoding="UTF-8" ?>
-<XMLDB PATH="mod/syllabus/db" VERSION="20090422" COMMENT="XMLDB file for Moodle mod/syllabus"
+<XMLDB PATH="mod/syllabus/db" VERSION="20130129" COMMENT="XMLDB file for Moodle mod/syllabus"
     xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
     xsi:noNamespaceSchemaLocation="../../../lib/xmldb/xmldb.xsd"
 >
   <TABLES>
     <TABLE NAME="syllabus" COMMENT="Defines syllabus module" NEXT="master_syllabus">
       <FIELDS>
-        <FIELD NAME="id" TYPE="int" LENGTH="10" NOTNULL="true" UNSIGNED="true" SEQUENCE="true" NEXT="course"/>
-        <FIELD NAME="course" TYPE="int" LENGTH="10" NOTNULL="true" UNSIGNED="true" DEFAULT="0" SEQUENCE="false" PREVIOUS="id" NEXT="name"/>
+        <FIELD NAME="id" TYPE="int" LENGTH="10" NOTNULL="true" SEQUENCE="true" NEXT="course"/>
+        <FIELD NAME="course" TYPE="int" LENGTH="10" NOTNULL="true" DEFAULT="0" SEQUENCE="false" PREVIOUS="id" NEXT="name"/>
         <FIELD NAME="name" TYPE="char" LENGTH="255" NOTNULL="true" SEQUENCE="false" PREVIOUS="course" NEXT="intro"/>
-        <FIELD NAME="intro" TYPE="text" LENGTH="small" NOTNULL="true" SEQUENCE="false" PREVIOUS="name" NEXT="introformat"/>
-        <FIELD NAME="introformat" TYPE="int" LENGTH="4" NOTNULL="false" UNSIGNED="true" DEFAULT="0" SEQUENCE="false" PREVIOUS="intro" NEXT="timemodified"/>
-        <FIELD NAME="timemodified" TYPE="int" LENGTH="10" NOTNULL="true" UNSIGNED="true" DEFAULT="0" SEQUENCE="false" PREVIOUS="introformat" NEXT="selected_course_syllabus"/>
-        <FIELD NAME="selected_course_syllabus" TYPE="int" LENGTH="10" NOTNULL="false" UNSIGNED="true" SEQUENCE="false" PREVIOUS="timemodified"/>
+        <FIELD NAME="intro" TYPE="text" NOTNULL="true" SEQUENCE="false" PREVIOUS="name" NEXT="introformat"/>
+        <FIELD NAME="introformat" TYPE="int" LENGTH="4" NOTNULL="false" DEFAULT="0" SEQUENCE="false" PREVIOUS="intro" NEXT="timemodified"/>
+        <FIELD NAME="timemodified" TYPE="int" LENGTH="10" NOTNULL="true" DEFAULT="0" SEQUENCE="false" PREVIOUS="introformat" NEXT="selected_course_syllabus"/>
+        <FIELD NAME="selected_course_syllabus" TYPE="int" LENGTH="10" NOTNULL="false" SEQUENCE="false" PREVIOUS="timemodified"/>
       </FIELDS>
       <KEYS>
         <KEY NAME="primary" TYPE="primary" FIELDS="id"/>
@@ -20,55 +20,51 @@
       <INDEXES>
         <INDEX NAME="course" UNIQUE="false" FIELDS="course"/>
       </INDEXES>
-    </TABLE>  
+    </TABLE>
     <TABLE NAME="master_syllabus" COMMENT="Defines master syllabus" PREVIOUS="syllabus" NEXT="course_syllabus">
       <FIELDS>
-        <FIELD NAME="id" TYPE="int" NOTNULL="true" UNSIGNED="true" SEQUENCE="true" NEXT="course_id"/>
-        <FIELD NAME="course_id" TYPE="int" NOTNULL="true" UNSIGNED="true" SEQUENCE="false" PREVIOUS="id" NEXT="course_number"/>
+        <FIELD NAME="id" TYPE="int" NOTNULL="true" SEQUENCE="true" NEXT="course_id"/>
+        <FIELD NAME="course_id" TYPE="int" NOTNULL="true" SEQUENCE="false" PREVIOUS="id" NEXT="course_number"/>
         <FIELD NAME="course_number" TYPE="char" LENGTH="255" NOTNULL="true" SEQUENCE="false" PREVIOUS="course_id" NEXT="title"/>
-	<FIELD NAME="title" TYPE="char" LENGTH="255" NOTNULL="true" UNSIGNED="true" SEQUENCE="false" PREVIOUS="course_number" NEXT="year"/>
+        <FIELD NAME="title" TYPE="char" LENGTH="255" NOTNULL="true" SEQUENCE="false" PREVIOUS="course_number" NEXT="year"/>
         <FIELD NAME="year" TYPE="int" LENGTH="4" NOTNULL="true" SEQUENCE="false" PREVIOUS="title" NEXT="semester"/>
         <FIELD NAME="semester" TYPE="char" LENGTH="255" NOTNULL="true" SEQUENCE="false" PREVIOUS="year" NEXT="credits"/>
         <FIELD NAME="credits" TYPE="char" LENGTH="255" NOTNULL="true" SEQUENCE="false" PREVIOUS="semester" NEXT="prerequisites"/>
         <FIELD NAME="prerequisites" TYPE="text" NOTNULL="false" SEQUENCE="false" PREVIOUS="credits" NEXT="corequisites"/>
-	<FIELD NAME="corequisites" TYPE="text" NOTNULL="false" SEQUENCE="false" PREVIOUS="prerequisites" NEXT="catalog_desc"/>
-	<FIELD NAME="catalog_desc" TYPE="text" NOTNULL="false" SEQUENCE="false" PREVIOUS="corequisites" NEXT="learning_outcomes"/>
-	<FIELD NAME="learning_outcomes" TYPE="text" NOTNULL="false" SEQUENCE="false" PREVIOUS="catalog_desc" NEXT="course_requirements"/>
-	<FIELD NAME="course_requirements" TYPE="text" NOTNULL="false" SEQUENCE="false" PREVIOUS="learning_outcomes" NEXT="attendance_policy"/>
-	<FIELD NAME="attendance_policy" TYPE="text" NOTNULL="false" SEQUENCE="false" PREVIOUS="course_requirements" NEXT="academic_ethics"/>
-	<FIELD NAME="academic_ethics" TYPE="text" NOTNULL="false" SEQUENCE="false" PREVIOUS="attendance_policy" NEXT="course_competencies"/>
-	<FIELD NAME="course_competencies" TYPE="text" NOTNULL="false" SEQUENCE="false" PREVIOUS="academic_ethics" NEXT="assessment"/>
-	<FIELD NAME="assessment" TYPE="text" NOTNULL="false" SEQUENCE="false" PREVIOUS="course_competencies" NEXT="heading"/>
-	<FIELD NAME="heading" TYPE="text" NOTNULL="false" SEQUENCE="false" PREVIOUS="assessment" NEXT="department"/>
-	<FIELD NAME="department" TYPE="char" NOTNULL="false" LENGTH="255" SEQUENCE="false" PREVIOUS="heading" NEXT="ada_statement"/>
+        <FIELD NAME="corequisites" TYPE="text" NOTNULL="false" SEQUENCE="false" PREVIOUS="prerequisites" NEXT="catalog_desc"/>
+        <FIELD NAME="catalog_desc" TYPE="text" NOTNULL="false" SEQUENCE="false" PREVIOUS="corequisites" NEXT="learning_outcomes"/>
+        <FIELD NAME="learning_outcomes" TYPE="text" NOTNULL="false" SEQUENCE="false" PREVIOUS="catalog_desc" NEXT="course_requirements"/>
+        <FIELD NAME="course_requirements" TYPE="text" NOTNULL="false" SEQUENCE="false" PREVIOUS="learning_outcomes" NEXT="attendance_policy"/>
+        <FIELD NAME="attendance_policy" TYPE="text" NOTNULL="false" SEQUENCE="false" PREVIOUS="course_requirements" NEXT="academic_ethics"/>
+        <FIELD NAME="academic_ethics" TYPE="text" NOTNULL="false" SEQUENCE="false" PREVIOUS="attendance_policy" NEXT="course_competencies"/>
+        <FIELD NAME="course_competencies" TYPE="text" NOTNULL="false" SEQUENCE="false" PREVIOUS="academic_ethics" NEXT="assessment"/>
+        <FIELD NAME="assessment" TYPE="text" NOTNULL="false" SEQUENCE="false" PREVIOUS="course_competencies" NEXT="heading"/>
+        <FIELD NAME="heading" TYPE="text" NOTNULL="false" SEQUENCE="false" PREVIOUS="assessment" NEXT="department"/>
+        <FIELD NAME="department" TYPE="char" LENGTH="255" NOTNULL="false" SEQUENCE="false" PREVIOUS="heading" NEXT="ada_statement"/>
         <FIELD NAME="ada_statement" TYPE="text" NOTNULL="false" SEQUENCE="false" PREVIOUS="department"/>
       </FIELDS>
       <KEYS>
         <KEY NAME="primary" TYPE="primary" FIELDS="id"/>
       </KEYS>
-      <INDEXES>
-        
-      </INDEXES>
     </TABLE>
-	<TABLE NAME="course_syllabus" COMMENT="Defines course syllabus" PREVIOUS="master_syllabus">
+    <TABLE NAME="course_syllabus" COMMENT="Defines course syllabus" PREVIOUS="master_syllabus">
       <FIELDS>
-        <FIELD NAME="id" TYPE="int" LENGTH="10" NOTNULL="true" UNSIGNED="true" SEQUENCE="true" NEXT="section_no"/>
+        <FIELD NAME="id" TYPE="int" LENGTH="10" NOTNULL="true" SEQUENCE="true" NEXT="section_no"/>
         <FIELD NAME="section_no" TYPE="char" LENGTH="7" NOTNULL="false" SEQUENCE="false" PREVIOUS="id" NEXT="master_syllabus_id"/>
-	<FIELD NAME="master_syllabus_id" TYPE="int" NOTNULL="true" UNSIGNED="false" SEQUENCE="false" PREVIOUS="section_no" NEXT="instructor_name"/>
-	<FIELD NAME="instructor_name" TYPE="char" LENGTH="245" NOTNULL="false" SEQUENCE="false" PREVIOUS="master_syllabus_id" NEXT="instructor_email"/>
-	<FIELD NAME="instructor_email" TYPE="char" LENGTH="245" NOTNULL="false" SEQUENCE="false" PREVIOUS="instructor_name" NEXT="instructor_phone"/>
-	<FIELD NAME="instructor_phone" TYPE="char" LENGTH="45" NOTNULL="false" SEQUENCE="false" PREVIOUS="instructor_email" NEXT="supplies"/>
-	<FIELD NAME="supplies" TYPE="text" NOTNULL="false" SEQUENCE="false" PREVIOUS="instructor_phone" NEXT="additional_info"/>
-	<FIELD NAME="additional_info" TYPE="text" NOTNULL="false" SEQUENCE="false" PREVIOUS="supplies" NEXT="textbook"/>
-	<FIELD NAME="textbook" TYPE="text" NOTNULL="false" SEQUENCE="false" PREVIOUS="additional_info" NEXT="instance"/>
-        <FIELD NAME="instance" TYPE="int" NOTNULL="true" SEQUENCE="false" LENGTH="10" UNSIGNED="true" PREVIOUS="textbook"/>
+        <FIELD NAME="master_syllabus_id" TYPE="int" NOTNULL="true" SEQUENCE="false" PREVIOUS="section_no" NEXT="year"/>
+        <FIELD NAME="year" TYPE="char" LENGTH="4" NOTNULL="true" SEQUENCE="false" PREVIOUS="master_syllabus_id" NEXT="semester"/>
+        <FIELD NAME="semester" TYPE="char" LENGTH="255" NOTNULL="true" SEQUENCE="false" PREVIOUS="year" NEXT="instructor_name"/>
+        <FIELD NAME="instructor_name" TYPE="char" LENGTH="245" NOTNULL="false" SEQUENCE="false" PREVIOUS="semester" NEXT="instructor_email"/>
+        <FIELD NAME="instructor_email" TYPE="char" LENGTH="245" NOTNULL="false" SEQUENCE="false" PREVIOUS="instructor_name" NEXT="instructor_phone"/>
+        <FIELD NAME="instructor_phone" TYPE="char" LENGTH="45" NOTNULL="false" SEQUENCE="false" PREVIOUS="instructor_email" NEXT="supplies"/>
+        <FIELD NAME="supplies" TYPE="text" NOTNULL="false" SEQUENCE="false" PREVIOUS="instructor_phone" NEXT="additional_info"/>
+        <FIELD NAME="additional_info" TYPE="text" NOTNULL="false" SEQUENCE="false" PREVIOUS="supplies" NEXT="textbook"/>
+        <FIELD NAME="textbook" TYPE="text" NOTNULL="false" SEQUENCE="false" PREVIOUS="additional_info" NEXT="instance"/>
+        <FIELD NAME="instance" TYPE="int" LENGTH="10" NOTNULL="true" SEQUENCE="false" PREVIOUS="textbook"/>
       </FIELDS>
       <KEYS>
         <KEY NAME="primary" TYPE="primary" FIELDS="id"/>
       </KEYS>
-      <INDEXES>
-        
-      </INDEXES>
     </TABLE>
   </TABLES>
 </XMLDB>

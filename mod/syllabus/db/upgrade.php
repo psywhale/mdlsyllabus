@@ -87,6 +87,29 @@ function xmldb_syllabus_upgrade($oldversion) {
 
     // Moodle v2.2.0 release upgrade line
     // Put any upgrade step following this
+     if ($oldversion < 2013012900) {
+
+        // Define field year to be added to course_syllabus
+        $table = new xmldb_table('course_syllabus');
+        $field = new xmldb_field('year', XMLDB_TYPE_CHAR, '4', null, XMLDB_NOTNULL, null, null, 'master_syllabus_id');
+
+        // Conditionally launch add field year
+        if (!$dbman->field_exists($table, $field)) {
+            $dbman->add_field($table, $field);
+        }
+        $table = new xmldb_table('course_syllabus');
+        $field = new xmldb_field('semester', XMLDB_TYPE_CHAR, '255', null, XMLDB_NOTNULL, null, null, 'year');
+
+        // Conditionally launch add field semester
+        if (!$dbman->field_exists($table, $field)) {
+            $dbman->add_field($table, $field);
+        }
+
+
+        // syllabus savepoint reached
+        upgrade_mod_savepoint(true, 2013012900, 'syllabus');
+    }
+
 
     return true;
 }
