@@ -131,7 +131,22 @@ function xmldb_syllabus_upgrade($oldversion) {
 
         // syllabus savepoint reached
         upgrade_mod_savepoint(true, 2013013000, 'syllabus');
+       }
+     if ($oldversion < 2013013001) {
+
+        // Define field grading_policy to be added to course_syllabus
+        $table = new xmldb_table('course_syllabus');
+        $field = new xmldb_field('grading_policy', XMLDB_TYPE_TEXT, null, null, null, null, null, 'assessment');
+
+        // Conditionally launch add field grading_policy
+        if (!$dbman->field_exists($table, $field)) {
+            $dbman->add_field($table, $field);
+        }
+
+        // syllabus savepoint reached
+        upgrade_mod_savepoint(true, 2013013001, 'syllabus');
     }
+     
 
 
     return true;

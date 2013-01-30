@@ -130,6 +130,9 @@ global $CFG, $DB;
                         <label for="attendance_policy" class="textarea">Attendance Policy</label>
                         <?php $value = $result[$syllabusid]->attendance_policy; ?>
                         <?php print_textarea(1, 25, 65, 400, 300, 'attendance_policy', $value); ?><br />
+                        <label for="grading_policy" class="textarea">Grading Policy</label>
+                        <?php $value = $result[$syllabusid]->grading_policy; ?>
+                        <?php print_textarea(1, 25, 65, 400, 300, 'grading_policy', $value); ?><br />
                         
                         <label for="assessment" class="textarea">Assessment Method</label>
                         <?php $value = $result[$syllabusid]->assessment; ?>

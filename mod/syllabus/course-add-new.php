@@ -109,8 +109,11 @@ global $CFG, $DB;
                         
                         <label for="supplies" class="textarea">Supplies</label>
                         <?php print_textarea(1, 25, 65, 200, 300, 'supplies'); ?><br />
-                        <label for="sattendance_policy" class="textarea">Attendance Policy</label>
+                        <label for="attendance_policy" class="textarea">Attendance Policy</label>
                         <?php print_textarea(1, 25, 65, 200, 300, 'attendance_policy'); ?><br />
+                        <label for="grading_policy" class="textarea">Grading Policy</label>
+                        <?php print_textarea(1, 25, 65, 200, 300, 'grading_policy'); ?><br />
+                        
                         <label for="assessment" class="textarea">Assessment</label>
                         <?php print_textarea(1, 25, 65, 200, 300, 'assessment'); ?><br />
                         

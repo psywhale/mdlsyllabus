@@ -305,3 +305,97 @@ function syllabus_get_semesters() {
                             
 return $semesters;
 }
+
+/**
+ * @return string 
+ */
+function syllabus_print($syllabus) {
+    //var_dump($syllabus); die;
+    $syllabus->heading = strtoupper($syllabus->heading);
+    $syllabus->department = strtoupper($syllabus->department);
+    $syllabus->title = strtoupper($syllabus->title);
+    $syllabus->course_number = strtoupper($syllabus->course_number);
+    $syllabus->credits = strtoupper($syllabus->credits);
+    $syllabus->prerequisites = strtoupper($syllabus->prerequisites); 
+    
+   $syllabus_html = "
+    <div id=\"syllabus_container\">
+        <p style=\"text-align:center;\"><img style=\"float:right; margin: -5px 0 0 -90px;\" src=\"http://wosc.edu/img/seal90.png\">
+	<span style=\"font-size: 78%\"><strong>$syllabus->heading </strong></span><br />
+	<span style=\"font-size: 80%;\"><strong>DEPARTMENT OF $syllabus->department</strong></span><br />
+	<span style=\"font-size: 155%;\"><strong>COURSE SYLLABUS</strong><br />
+	</p><br />
+<!--         <p style=\"text-align:center\"><strong>COURSE SYLLABUS</strong></p> -->
+        <table style=\"border:none;width:100%\" style=\"syllabus_table\">
+            <tr>
+                <td style=\"\"><strong>COURSE TITLE</strong></td>
+                <td>$syllabus->title</td>
+                <td style=\"\"><strong>INSTRUCTOR NAME</strong></td>
+                <td>$syllabus->instructor_name</td>
+            </tr>
+            <tr>
+                <td style=\"\"><strong>SEMESTER</strong></td>
+                <td>$syllabus->semester $syllabus->year</td>
+                <td style=\"\"><strong>INSTRUCTOR EMAIL</strong></td>
+                <td><a href=\"mailto:$syllabus->instructor_email?subject=Question about the $syllabus->section_no; ?>: <?php echo strtoupper($syllabus->title); ?> Syllabus...&body=Course Title:&nbsp;&nbsp;&nbsp;&nbsp;<?php echo strtoupper($syllabus->title); ?>%0D%0ACourse Date:&nbsp;&nbsp;&nbsp;<?php echo $syllabus->semester; ?> <?php echo $syllabus->year; ?>%0D%0ACourse #:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<?php echo strtoupper($syllabus->course_number); ?>%0D%0A%0D%0A%0D%0A - Insert Question Here - %0D%0A\" target=\"_blank\">$syllabus->instructor_email</a></td>
+            </tr>
+            <tr>
+                <td style=\"\"><strong>COURSE NUMBER</strong></td>
+                <td>$syllabus->course_number</td>
+                <td style=\"\"><strong>INSTRUCTOR PHONE</strong></td>
+                <td>$syllabus->instructor_phone</td>
+            </tr>
+            <tr>
+                <td style=\"\"><strong>SECTION NUMBER</strong></td>
+                <td>$syllabus->section_no</td>
+                <td style=\"\"><strong>CREDIT HOURS</strong></td>
+                <td>$syllabus->credits</td>
+            </tr>
+        </table>   
+<hr style=\"color: #555 !important;\" > 
+		<div style=\"margin-left: 8px;\"> <!-- START <p> left margin -->
+        <strong>PREREQUISITES</strong> $syllabus->prerequisites
+        <strong>COREQUISITES</strong> $syllabus->corequisites
+        <strong>CATALOG DESCRIPTION</strong> $syllabus->catalog_desc
+        <strong>TEXTBOOK</strong> $syllabus->textbook
+        <strong>SUPPLIES</strong> $syllabus->supplies
+        <strong>LEARNING OUTCOMES</strong> $syllabus->learning_outcomes
+        <strong>COURSE REQUIREMENTS</strong> $syllabus->course_requirements
+        <strong>ATTENDANCE POLICY</strong> $syllabus->attendance_policy
+        <strong>GRADING POLICY</strong> $syllabus->grading_policy
+        <strong>ACADEMIC ETHICS</strong> $syllabus->academic_ethics
+        <strong>COURSE COMPETENCIES</strong> $syllabus->course_competencies
+        <strong>ASSESSMENT</strong> $syllabus->assessment
+        <strong>ADDITIONAL INFO</strong> $syllabus->additional_info
+        <strong>ADA STATEMENT</strong> $syllabus->ada_statement
+		</div> <!-- END <p> left margin -->
+
+<style TYPE=\"text/css\">
+#syllabus_container { padding: 20px 15px; margin: 15px auto; width: 90%; min-width: 500px; max-width: 1024px;
+  background: white; background: rgba(250, 250, 250, 0.8); border: ridge 1px black; font-size: 108%;
+  -webkit-border-radius: 10px; moz-border-radius: 10px; ms-border-radius: 10px; o-border-radius: 10px; border-radius: 10px;
+  -moz-box-shadow: inset 0 0 10px #ddd, 2px 2px 10px #777; -webkit-box-shadow: inset 0 0 10px #ddd, 2px 2px 10px #777;
+  box-shadow: inset 0 0 10px #ddd, 2px 2px 10px #777; color: black !important;}
+table#syllabus_table td { margin: -20px 0 !important; text-overflow: ellipsis;}
+  @media only screen and (max-width: 920px) {
+    #syllabus_container img {width: 75px}
+    #syllabus_container {font-size: 90%}
+  }
+  @media only screen and (max-width: 790px) {
+    #syllabus_container img {width: 65px}
+    #syllabus_container {font-size: 80%}
+  }
+  @media only screen and (max-width: 690px) {
+    #syllabus_container img {width: 60px}
+    #syllabus_container {font-size: 70%}
+  }
+  @media only screen and (max-width: 650px) {
+    #syllabus_container img {display:none}
+  }
+</style>
+
+    </div>
+    ";
+   
+   return $syllabus_html;
+}
