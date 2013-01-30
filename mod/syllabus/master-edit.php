@@ -89,9 +89,7 @@ global $CFG, $DB;
                         <?php $value = $result[$syllabusid]->attendance_policy; ?>
                         <?php print_textarea(1, 25, 65, 400, 300, 'attendance_policy', $value); ?><br />
                         
-                        <label for="academic_ethics" class="textarea">Academic Ethics</label>
-                        <?php $value = $result[$syllabusid]->academic_ethics; ?>
-                        <?php print_textarea(1, 25, 65, 400, 300, 'academic_ethics', $value); ?><br />
+                        
                         
                         <label for="course_competencies" class="textarea">Course Competencies</label>
                         <?php $value = $result[$syllabusid]->course_competencies; ?>

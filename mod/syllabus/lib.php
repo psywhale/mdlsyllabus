@@ -363,11 +363,15 @@ function syllabus_print($syllabus) {
         <strong>COURSE REQUIREMENTS</strong> $syllabus->course_requirements
         <strong>ATTENDANCE POLICY</strong> $syllabus->attendance_policy
         <strong>GRADING POLICY</strong> $syllabus->grading_policy
-        <strong>ACADEMIC ETHICS</strong> $syllabus->academic_ethics
+        <strong>ACADEMIC ETHICS</strong> <br />Western Oklahoma State College is committed to instilling and upholding integrity as a core value. All members of the Western Oklahoma State College community are entrusted with academic integrity, which encompasses the fundamental values of honesty, trust, respect, fairness, and responsibility. Western is devoted to maintaining an honest academic environment and ensures fair resolution of alleged violations of academic integrity.
+        <a href=\"http://wosc.edu//index.php?page=academic-integrity-policy\"> Complete Integrity Policy available here... </a> <br/><br/>
         <strong>COURSE COMPETENCIES</strong> $syllabus->course_competencies
         <strong>ASSESSMENT</strong> $syllabus->assessment
         <strong>ADDITIONAL INFO</strong> $syllabus->additional_info
-        <strong>ADA STATEMENT</strong> $syllabus->ada_statement
+        <strong>ADA STATEMENT</strong> <br/>
+           WOSC is committed to providing support services to physically and learning disabled students.  These services are guided by Section 504 of the Rehabilitation Act of 1973 and the Americans with Disabilities Act of 1990 which prohibits discrimination against otherwise qualified individuals with disabilities, and mandates that reasonable accommodations be made for such persons. <a href=\"http://www.wosc.edu/index.php?page=counseling\">Complete ADA Policy available</a> 
+           <br/><br/>
+           <strong>SUBJECT TO CHANGE NOTICE</strong> <br/>This syllabus is subject to change at any point during the course. If changes are made to the syllabus, all affected students will be notified by the method(s) listed in the Syllabus Change Notification section.<br/>
 		</div> <!-- END <p> left margin -->
 
 <style TYPE=\"text/css\">

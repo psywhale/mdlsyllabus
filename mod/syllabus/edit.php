@@ -154,22 +154,19 @@ if(empty($course)) {
                         ?>
                         </select><br />
                         <label for="semester">Semester</label>
-                        <select name="semester">
-                            <option>FALL</option>
-                            <option>FALL 1st 8 weeks</option>
-                            <option>FALL 2nd 8 weeks</option>
-                            <option>FALL 1st 4 weeks</option>
-                            <option>FALL 2nd 4 weeks</option>
-                            <option>FALL 3rd 4 weeks</option>
-                            <option>FALL 4th 4 weeks</option>
-                            <option>SPRING</option>
-                            <option>SPRING A</option>
-                            <option>SPRING B</option>
-                            <option>SUMMER</option>
-                            <option>SUMMER A</option>
-                            <option>SUMMER B</option>
-                            <option>SUMMER C</option>
-                        </select><br />
+                        <?php
+                        echo "<select name=semester>";
+                        $semesters = syllabus_get_semesters();
+                        foreach($semesters as $key => $value) {
+                                if($value == $result[$syllabusid]->semester) {
+                                    echo '<option selected="selected">'.$value.'</option>';
+                                } else {
+                                    echo '<option>'.$value.'</option>';
+                                }
+                            }
+                        echo "</select>";
+                        ?>
+                        <br />
                 
                         <label for="credits">Credits*</label>
                         <input type="text" class="required" name="credits" /><br />
@@ -186,14 +183,12 @@ if(empty($course)) {
                         <?php print_textarea(1, 25, 65, 400, 300, 'course_requirements'); ?><br />
                         <label for="attendance_policy" class="textarea">Attendance Policy</label>
                         <?php print_textarea(1, 25, 65, 400, 300, 'attendance_policy'); ?><br />
-                        <label for="academic_ethics" class="textarea">Academic Ethics</label>
-                        <?php print_textarea(1, 25, 65, 400, 300, 'academic_ethics'); ?><br />
+                        
                         <label for="course_competencies" class="textarea">Course Competencies</label>
                         <?php print_textarea(1, 25, 65, 400, 300, 'course_competencies'); ?><br />
                         <label for="assessment" class="textarea">Assessment</label>
                         <?php print_textarea(1, 25, 65, 400, 300, 'assessment'); ?><br />
-                        <label for="ada_statement" class="textarea">ADA Statement</label>
-                        <?php print_textarea(1, 25, 65, 400, 300, 'ada_statement'); ?><br />
+                        
                         <input type="submit" value="Add" name="submit"/> <input type="submit" value="Cancel" id="master-add-new-cancel" name="cancel" />
                     </form>
                     <p>* Required fields.</p>
