@@ -368,6 +368,10 @@ function syllabus_print($syllabus) {
         <strong>COURSE COMPETENCIES</strong> $syllabus->course_competencies
         <strong>ASSESSMENT</strong> $syllabus->assessment
         <strong>ADDITIONAL INFO</strong> $syllabus->additional_info
+        <strong>WITHDRAW POLICY</strong> <br/>
+           A student may withdraw from one of more classes with an automatic grade of \"W\". Please read the complete withdraw policy located in <a href=\"http://www.wosc.edu/index.php?page=College-Catalog\">College Catalog</a>.
+     
+           <br/><br/>
         <strong>ADA STATEMENT</strong> <br/>
            WOSC is committed to providing support services to physically and learning disabled students.  These services are guided by Section 504 of the Rehabilitation Act of 1973 and the Americans with Disabilities Act of 1990 which prohibits discrimination against otherwise qualified individuals with disabilities, and mandates that reasonable accommodations be made for such persons. <a href=\"http://www.wosc.edu/index.php?page=counseling\">Complete ADA Policy available</a> 
            <br/><br/>
