@@ -142,6 +142,10 @@ global $CFG, $DB;
                         <?php $value = $result[$syllabusid]->additional_info; ?>
                         <?php print_textarea(1, 25, 65, 400, 300, 'additional_info', $value); ?><br />
                         
+                        <label for="notify_method" class="textarea">Method(s) of Notification of Syllabus Changes</label>
+                        <?php $value = $result[$syllabusid]->notify_method; ?>
+                        <?php print_textarea(1, 25, 65, 400, 300, 'notify_method', $value); ?><br />
+                        
                         
                         <input type="submit" value="Update" name="submit-edit"/> <input type="submit" value="Cancel" id="course-edit-cancel" name="cancel" />
                     </form>

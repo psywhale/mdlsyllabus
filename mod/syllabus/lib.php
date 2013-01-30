@@ -371,7 +371,8 @@ function syllabus_print($syllabus) {
         <strong>ADA STATEMENT</strong> <br/>
            WOSC is committed to providing support services to physically and learning disabled students.  These services are guided by Section 504 of the Rehabilitation Act of 1973 and the Americans with Disabilities Act of 1990 which prohibits discrimination against otherwise qualified individuals with disabilities, and mandates that reasonable accommodations be made for such persons. <a href=\"http://www.wosc.edu/index.php?page=counseling\">Complete ADA Policy available</a> 
            <br/><br/>
-           <strong>SUBJECT TO CHANGE NOTICE</strong> <br/>This syllabus is subject to change at any point during the course. If changes are made to the syllabus, all affected students will be notified by the method(s) listed in the Syllabus Change Notification section.<br/>
+        <strong>SUBJECT TO CHANGE NOTICE</strong> <br/>This syllabus is subject to change at any point during the course. If changes are made to the syllabus, all affected students will be notified by the method(s) listed in the Syllabus Change Notification section.<br/><br/>
+        <strong>SYLLABUS CHANGE NOTIFICATION METHODS</strong> $syllabus->notify_method
 		</div> <!-- END <p> left margin -->
 
 <style TYPE=\"text/css\">

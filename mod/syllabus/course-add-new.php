@@ -119,6 +119,8 @@ global $CFG, $DB;
                         
                         <label for="additional_info" class="textarea">Additional Info</label>
                         <?php print_textarea(1, 25, 65, 200, 300, 'additional_info'); ?><br />
+                         <label for="notify_method" class="textarea">Notificaton Method</label>
+                        <?php print_textarea(1, 25, 65, 200, 300, 'notify_method'); ?><br />
                         
                         <input type="submit" value="Add" name="submit-add-new"/> <input type="submit" value="Cancel" id="course-add-cancel" name="cancel" />
                     </form>
