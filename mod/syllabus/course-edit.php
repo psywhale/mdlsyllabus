@@ -77,6 +77,14 @@ global $CFG, $DB;
                         if(!$result[$syllabusid]->semester) {
                             $result[$syllabusid]->semester = $masterresult[$mastersyllabusid]->semester;
                         }
+                        
+                        //same for att. policy & assessment
+                        if(!$result[$syllabusid]->attendance_policy) {
+                            $result[$syllabusid]->attendance_policy = $masterresult[$mastersyllabusid]->attendance_policy;
+                        }
+                        if(!$result[$syllabusid]->assessment) {
+                            $result[$syllabusid]->assessment = $masterresult[$mastersyllabusid]->assessment;
+                        }
                             
 		   
                         
@@ -118,6 +126,14 @@ global $CFG, $DB;
                         <label for="supplies" class="textarea">Supplies</label>
                         <?php $value = $result[$syllabusid]->supplies; ?>
                         <?php print_textarea(1, 25, 65, 400, 300, 'supplies', $value); ?><br />
+                        
+                        <label for="attendance_policy" class="textarea">Attendance Policy</label>
+                        <?php $value = $result[$syllabusid]->attendance_policy; ?>
+                        <?php print_textarea(1, 25, 65, 400, 300, 'attendance_policy', $value); ?><br />
+                        
+                        <label for="assessment" class="textarea">Assessment Method</label>
+                        <?php $value = $result[$syllabusid]->assessment; ?>
+                        <?php print_textarea(1, 25, 65, 400, 300, 'assessment', $value); ?><br />
                         
                         <label for="additional_info" class="textarea">Additional Info</label>
                         <?php $value = $result[$syllabusid]->additional_info; ?>

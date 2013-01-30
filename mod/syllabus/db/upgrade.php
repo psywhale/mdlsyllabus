@@ -109,6 +109,29 @@ function xmldb_syllabus_upgrade($oldversion) {
         // syllabus savepoint reached
         upgrade_mod_savepoint(true, 2013012900, 'syllabus');
     }
+    
+        if ($oldversion < 2013013000) {
+
+        // Define field attendance_policy to be added to course_syllabus
+        $table = new xmldb_table('course_syllabus');
+        $field = new xmldb_field('attendance_policy', XMLDB_TYPE_TEXT, null, null, null, null, null, 'instance');
+
+        // Conditionally launch add field attendance_policy
+        if (!$dbman->field_exists($table, $field)) {
+            $dbman->add_field($table, $field);
+        }
+        
+        $table = new xmldb_table('course_syllabus');
+        $field = new xmldb_field('assessment', XMLDB_TYPE_TEXT, null, null, null, null, null, 'attendance_policy');
+
+        // Conditionally launch add field assessment
+        if (!$dbman->field_exists($table, $field)) {
+            $dbman->add_field($table, $field);
+        }
+
+        // syllabus savepoint reached
+        upgrade_mod_savepoint(true, 2013013000, 'syllabus');
+    }
 
 
     return true;
