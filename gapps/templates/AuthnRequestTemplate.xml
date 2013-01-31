@@ -1,9 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<samlp:AuthnRequest 
-	xmlns:samlp="urn:oasis:names:tc:SAML:2.0:protocol"
-	ID="<AUTHN_ID>" 
-	Version="2.0"
-	IssueInstant="<ISSUE_INSTANT>"
-	ProtocolBinding="urn:oasis:names.tc:SAML:2.0:bindings:HTTP-Redirect"
-	ProviderName="<PROVIDER_NAME>"
-	AssertionConsumerServiceURL="<ACS_URL>"/>
