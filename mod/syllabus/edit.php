@@ -33,6 +33,7 @@ $PAGE->set_context($context);
 $PAGE->set_pagelayout('course');
 
 
+
 // other things you may want to set - remove if not needed
 //$PAGE->set_cacheable(false);
 //$PAGE->set_focuscontrol('some-html-id');
