@@ -372,6 +372,19 @@ function syllabus_print($syllabus) {
            A student may withdraw from one of more classes with an automatic grade of \"W\". Please read the complete withdraw policy located in <a href=\"http://www.wosc.edu/index.php?page=College-Catalog\">College Catalog</a>.
      
            <br/><br/>
+        <strong>TUTORING</strong> <br/>
+            Western provides FREE tutoring for students experiencing academic difficulty. Peer tutoring is available in A-4 and online tutoring is available at Tutor.com. For more information regarding these services visit the <a href=\"http://wosc.edu//index.php?page=peer-tutoring\">Tutoring web page</a>.
+     
+           <br/><br/>
+        <strong>TRANSCRIPTS</strong> <br/>
+             Students may request a transcript by visiting the Office of Admissions or logging into their Campus Connect account.  For more information go to <a href=http://wosc.edu//admissions#transcripts>WOSC Transcripts webpage</a>
+     
+           <br/><br/>
+        <strong>STUDENTS RECIEVING TITLE IV FEDERAL AID (GRANTS,LOANS,WORK-STUDY,ETC..)</strong> <br/>
+              If you withdraw or do not successfully complete the hours your aid was calculated on, or quit attending class before the 60% point of the semester, you may owe a refund to the Title IV Program.<br/><br/>
+Class attendance is a requirement to receive Title IV Federal Aid.   On-line students must submit work to be certified as attending. Failure to attend class will delay and could void your aid.
+     
+           <br/><br/>
         <strong>ADA STATEMENT</strong> <br/>
            WOSC is committed to providing support services to physically and learning disabled students.  These services are guided by Section 504 of the Rehabilitation Act of 1973 and the Americans with Disabilities Act of 1990 which prohibits discrimination against otherwise qualified individuals with disabilities, and mandates that reasonable accommodations be made for such persons. <a href=\"http://www.wosc.edu/index.php?page=counseling\">Complete ADA Policy available</a> 
            <br/><br/>
