@@ -99,9 +99,6 @@ global $CFG, $DB;
                         <?php $value = $result[$syllabusid]->assessment; ?>
                         <?php print_textarea(1, 25, 65, 400, 300, 'assessment', $value); ?><br />
                         
-                        <label for="ada_statement" class="textarea">ADA Statement</label>
-                        <?php $value = $result[$syllabusid]->ada_statement; ?>
-                        <?php print_textarea(1, 25, 65, 400, 300, 'ada_statement', $value); ?><br />
                         
                         <input type="submit" value="Update" name="submit"/> <input type="submit" value="Cancel" id="master-edit-cancel" name="cancel" />
                     </form>
