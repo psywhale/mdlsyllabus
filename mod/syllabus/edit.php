@@ -260,7 +260,7 @@ if(empty($course)) {
                 </div>
                     <?php 
                     //  select which master syllabus to use as a template
-                   $result = $DB->get_records_sql("SELECT id,course_number,semester,year FROM {master_syllabus}");
+                   $result = $DB->get_records_sql("SELECT id,course_number,semester,year FROM {master_syllabus} order by {master_syllabus}.course_number ASC");
                    ?>
                 <div class="syllabus-form-body" id="course-syllabus-add-new">
                     <p>Please select a master syllabus to use as a template:</p>
