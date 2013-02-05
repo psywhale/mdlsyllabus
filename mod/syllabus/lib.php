@@ -360,12 +360,13 @@ function syllabus_print($syllabus) {
         <strong>TEXTBOOK</strong> $syllabus->textbook
         <strong>SUPPLIES</strong> $syllabus->supplies
         <strong>LEARNING OUTCOMES</strong> $syllabus->learning_outcomes
+        <strong>COURSE COMPETENCIES</strong> $syllabus->course_competencies
         <strong>COURSE REQUIREMENTS</strong> $syllabus->course_requirements
         <strong>ATTENDANCE POLICY</strong> $syllabus->attendance_policy
         <strong>GRADING POLICY</strong> $syllabus->grading_policy
         <strong>ACADEMIC ETHICS</strong> <br />Western Oklahoma State College is committed to instilling and upholding integrity as a core value. All members of the Western Oklahoma State College community are entrusted with academic integrity, which encompasses the fundamental values of honesty, trust, respect, fairness, and responsibility. Western is devoted to maintaining an honest academic environment and ensures fair resolution of alleged violations of academic integrity.
         <a href=\"http://wosc.edu//index.php?page=academic-integrity-policy\"> Complete Integrity Policy available here... </a> <br/><br/>
-        <strong>COURSE COMPETENCIES</strong> $syllabus->course_competencies
+      
         <strong>ASSESSMENT</strong> $syllabus->assessment
         <strong>ADDITIONAL INFO</strong> $syllabus->additional_info
         <strong>WITHDRAW POLICY</strong> <br/>
