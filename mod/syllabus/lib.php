@@ -360,14 +360,14 @@ function syllabus_print($syllabus) {
         <strong>TEXTBOOK</strong> $syllabus->textbook
         <strong>SUPPLIES</strong> $syllabus->supplies
         <strong>LEARNING OUTCOMES</strong> $syllabus->learning_outcomes
-        <strong>COURSE COMPETENCIES</strong> $syllabus->course_competencies
+        
         <strong>COURSE REQUIREMENTS</strong> $syllabus->course_requirements
         <strong>ATTENDANCE POLICY</strong> $syllabus->attendance_policy
         <strong>GRADING POLICY</strong> $syllabus->grading_policy
         <strong>ACADEMIC ETHICS</strong> <br />Western Oklahoma State College is committed to instilling and upholding integrity as a core value. All members of the Western Oklahoma State College community are entrusted with academic integrity, which encompasses the fundamental values of honesty, trust, respect, fairness, and responsibility. Western is devoted to maintaining an honest academic environment and ensures fair resolution of alleged violations of academic integrity.
         <a href=\"http://wosc.edu//index.php?page=academic-integrity-policy\"> Complete Integrity Policy available here... </a> <br/><br/>
-      
-        <strong>ASSESSMENT</strong> $syllabus->assessment
+        <strong>ASSESSMENT</strong> <br />An important part of Western’s “commitment to excellence” is the systematic collection and examination of assessment data both to document and to improve student learning. Instructors and students will be asked to participate in assessment activities as a part of the course work. The results of assessment benefit students by identifying how competently they perform course goals as well as benefiting the college by confirming Western’s performance as an institution of higher education. <br/><br/>
+        <strong>COURSE ASSESSMENT</strong> $syllabus->assessment
         <strong>ADDITIONAL INFO</strong> $syllabus->additional_info
         <strong>WITHDRAW POLICY</strong> <br/>
            A student may withdraw from one of more classes with an automatic grade of \"W\". Please read the complete withdraw policy located in <a href=\"http://www.wosc.edu/index.php?page=College-Catalog\">College Catalog</a>.
@@ -390,7 +390,8 @@ Class attendance is a requirement to receive Title IV Federal Aid.   On-line stu
            WOSC is committed to providing support services to physically and learning disabled students.  These services are guided by Section 504 of the Rehabilitation Act of 1973 and the Americans with Disabilities Act of 1990 which prohibits discrimination against otherwise qualified individuals with disabilities, and mandates that reasonable accommodations be made for such persons. <a href=\"http://www.wosc.edu/index.php?page=counseling\">Complete ADA Policy available</a> 
            <br/><br/>
         <strong>SUBJECT TO CHANGE NOTICE</strong> <br/>This syllabus is subject to change at any point during the course. If changes are made to the syllabus, all affected students will be notified by the method(s) listed in the Syllabus Change Notification section.<br/><br/>
-        <strong>SYLLABUS CHANGE NOTIFICATION METHODS</strong> $syllabus->notify_method
+        <strong>SYLLABUS CHANGE NOTIFICATION METHOD</strong> $syllabus->notify_method
+        <strong>COURSE COMPETENCIES</strong> $syllabus->course_competencies
 		</div> <!-- END <p> left margin -->
 
 <style TYPE=\"text/css\">
