@@ -70,7 +70,7 @@ global $CFG, $DB;
                             $years[$now] = $now;
                             
                             }
-                        // if no year grab from master 
+                        // if no XXXX grab from master 
                         if(!$result[$syllabusid]->year) {
                             $result[$syllabusid]->year = $masterresult[$mastersyllabusid]->year;
                         }
@@ -84,6 +84,9 @@ global $CFG, $DB;
                         }
                         if(!$result[$syllabusid]->assessment) {
                             $result[$syllabusid]->assessment = $masterresult[$mastersyllabusid]->assessment;
+                        }
+                        if(!$result[$syllabusid]->course_requirements) {
+                            $result[$syllabusid]->course_requirements = $masterresult[$mastersyllabusid]->course_requirements;
                         }
                             
 		   
@@ -119,6 +122,11 @@ global $CFG, $DB;
                         <input class="required" type="text" name="instructor_email" value="<?php echo $result[$syllabusid]->instructor_email; ?>" /><br />
                         <label for="instructor_phone">Instructor Phone</label>
                         <input type="text" name="instructor_phone" value="<?php echo $result[$syllabusid]->instructor_phone; ?>" /><br />
+                        
+                        <label for="course_requirements" class="textarea">Course Requirements</label>
+                        <?php $value = $result[$syllabusid]->course_requirements; ?>
+                        <?php print_textarea(1, 25, 65, 400, 300, 'course_requirements', $value); ?><br />
+                        
                         <label for="textbook" class="textarea">Textbook</label>
                         <?php $value = $result[$syllabusid]->textbook; ?>
                         <?php print_textarea(1, 25, 65, 400, 300, 'textbook', $value); ?><br />

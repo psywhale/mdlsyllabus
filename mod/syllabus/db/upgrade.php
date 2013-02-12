@@ -161,6 +161,22 @@ function xmldb_syllabus_upgrade($oldversion) {
         // syllabus savepoint reached
         upgrade_mod_savepoint(true, 2013013002, 'syllabus');
     }
+    
+    
+        if ($oldversion < 2013021200) {
+
+        // Define field notify_method to be added to course_syllabus
+        $table = new xmldb_table('course_syllabus');
+        $field = new xmldb_field('course_requirements', XMLDB_TYPE_TEXT, null, null, null, null, null, 'notify_method');
+
+        // Conditionally launch add field notify_method
+        if (!$dbman->field_exists($table, $field)) {
+            $dbman->add_field($table, $field);
+        }
+
+        // syllabus savepoint reached
+        upgrade_mod_savepoint(true, 2013021200, 'syllabus');
+    }
 
      
 
