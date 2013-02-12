@@ -142,7 +142,7 @@ global $CFG, $DB;
                         <?php $value = $result[$syllabusid]->grading_policy; ?>
                         <?php print_textarea(1, 25, 65, 400, 300, 'grading_policy', $value); ?><br />
                         
-                        <label for="assessment" class="textarea">Assessment Method</label>
+                        <label for="assessment" class="textarea">Course Assessment</label>
                         <?php $value = $result[$syllabusid]->assessment; ?>
                         <?php print_textarea(1, 25, 65, 400, 300, 'assessment', $value); ?><br />
                         
@@ -150,7 +150,7 @@ global $CFG, $DB;
                         <?php $value = $result[$syllabusid]->additional_info; ?>
                         <?php print_textarea(1, 25, 65, 400, 300, 'additional_info', $value); ?><br />
                         
-                        <label for="notify_method" class="textarea">Method(s) of Notification of Syllabus Changes</label>
+                        <label for="notify_method" class="textarea">Syllabus Change Notification Method</label>
                         <?php $value = $result[$syllabusid]->notify_method; ?>
                         <?php print_textarea(1, 25, 65, 400, 300, 'notify_method', $value); ?><br />
                         
