@@ -45,7 +45,7 @@ echo $OUTPUT->header();
 
 global $CFG, $DB;
 	$result = $DB->get_records_sql("SELECT * FROM {master_syllabus} WHERE id = ?", array($syllabusid));
-       
+
         ?>   
 <div class="syllabus-form-tabs">
                 
@@ -109,13 +109,15 @@ global $CFG, $DB;
                         
                         <label for="supplies" class="textarea">Supplies</label>
                         <?php print_textarea(1, 25, 65, 200, 300, 'supplies'); ?><br />
+                        <label for="course_requirements" class="textarea">Course Requirements</label>
+                        <?php print_textarea(1, 25, 65, 200, 300, 'course_requirements',$result[$syllabusid]->course_requirements); ?><br />
                         <label for="attendance_policy" class="textarea">Attendance Policy</label>
                         <?php print_textarea(1, 25, 65, 200, 300, 'attendance_policy'); ?><br />
                         <label for="grading_policy" class="textarea">Grading Policy</label>
-                        <?php print_textarea(1, 25, 65, 200, 300, 'grading_policy'); ?><br />
+                        <?php print_textarea(1, 25, 65, 200, 300, 'grading_policy',$result[$syllabusid]->grading_policy); ?><br />
                         
                         <label for="assessment" class="textarea">Assessment</label>
-                        <?php print_textarea(1, 25, 65, 200, 300, 'assessment'); ?><br />
+                        <?php print_textarea(1, 25, 65, 200, 300, 'assessment',$result[$syllabusid]->assessment); ?><br />
                         
                         <label for="additional_info" class="textarea">Additional Info</label>
                         <?php print_textarea(1, 25, 65, 200, 300, 'additional_info'); ?><br />
