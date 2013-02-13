@@ -36,3 +36,5 @@ $string['coursenumbererror'] = 'Please enter a course number.';
 $string['headingerror'] = 'Please enter a heading.';
 $string['departmenterror'] = 'Please enter a department.';
 $string['creditserror'] = 'Please enter credits.';
+$string['SyllabusMasterClass'] = "Class ID";
+$string['SyllabusMasterClassDescription'] = "The Class ID that will hold the master list of course syllabii";

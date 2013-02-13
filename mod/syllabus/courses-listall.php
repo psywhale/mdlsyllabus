@@ -14,7 +14,7 @@ require_login($course, true, NULL);
 
 $context = get_context_instance(CONTEXT_COURSE, $course);
 
-
+var_dump($course);die;
 
 $PAGE->set_url('/mod/syllabus/edit.php', array('course'=>$course));
 
