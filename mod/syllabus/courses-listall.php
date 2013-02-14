@@ -8,13 +8,18 @@ require_once("lib.php");
 $id = optional_param('id',0,PARAM_INT);    // Course Module ID, or
 //$l = optional_param('l',0,PARAM_INT);     // Syllabus ID
 $course = $_GET['course'];
-$instance_id = $_GET['instance_id'];
+$instance_id = $id;
+global $DB, $CFG;
 
+$result = $DB->get_records_sql("SELECT course FROM {course_modules} WHERE id = ?", array($instance_id));
+foreach ($result as $key => $value) {
+    $course = $key;
+}
 require_login($course, true, NULL);
 
 $context = get_context_instance(CONTEXT_COURSE, $course);
 
-var_dump($course);die;
+var_dump($result);die;
 
 $PAGE->set_url('/mod/syllabus/edit.php', array('course'=>$course));
 

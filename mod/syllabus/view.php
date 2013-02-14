@@ -37,6 +37,10 @@ foreach ($result as $key => $value) {
 
 require_login($course, true, NULL);
 
+if($CFG->SyllabusMasterClass == $course) {
+    redirect("$CFG->wwwroot/mod/syllabus/courses-listall.php?id=$instance_id");
+}
+
 $PAGE->set_url('/mod/syllabus/view.php', array('course'=>$course));
 
 $PAGE->set_title('Course Syllabus');
