@@ -51,9 +51,9 @@ echo $OUTPUT->header();
 ?>
 
 <div class="syllabus-form-body">
-    <table class="syllabus-table"><colgroup><col /><col /><col /><col /><col /></colgroup>
+    <table class="syllabus-table"><colgroup><col /><col /><col /><col /><col /><col /></colgroup>
                 
-                <tr class="heading"><th>Course</th><th>Title</th><th>Year</th><th>Semester</th><th>Action</th></tr>
+                <tr class="heading"><th>Course</th><th>Section</th><th>Title</th><th>Year</th><th>Semester</th><th>Action</th></tr>
                 <?php
                 //Get all records from course_syllabus that were created for this instance 
                 $result = $DB->get_records_sql('SELECT {course_syllabus}.id,
@@ -80,6 +80,7 @@ echo $OUTPUT->header();
                     $semester = $value->semester;
                     $syllabusid = $value->id;
                     $courseid = $value->course_id;
+                    $section_num = $value->section_no;
                 //    $selected = $value->selected;
                 
                     if($i % 2 == 0) {
@@ -90,7 +91,7 @@ echo $OUTPUT->header();
                         
                         echo '<tr';
                     }
-                    echo '><td>'.$course_number.'</td><td>'.$title.'</td><td>'.$year.'</td><td>'.$semester.'</td><td class="syllabus-center">';
+                    echo '><td>'.$course_number.'</td><td>'.$section_num.'</td><td>'.$title.'</td><td>'.$year.'</td><td>'.$semester.'</td><td class="syllabus-center">';
                     
                    
                     echo '<a href="'.$CFG->wwwroot.'/mod/syllabus/public-view.php?id='.$value->instance.'">Public Link</a>'; 
