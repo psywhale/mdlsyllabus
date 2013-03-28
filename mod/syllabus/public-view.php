@@ -47,9 +47,16 @@ $PAGE->set_heading('Course Syllabus');
 
 echo $OUTPUT->header();
 
+$result = $DB->get_records_sql("SELECT {master_syllabus}.*, {course_syllabus}.* 
+    FROM {master_syllabus} JOIN {course_syllabus} ON {master_syllabus}.id = 
+    {course_syllabus}.master_syllabus_id where {course_syllabus}.instance = ?", array($instance_id));
 
-$result = $DB->get_records_sql("SELECT {master_syllabus}.*, {course_syllabus}.* FROM {master_syllabus} JOIN {course_syllabus} ON {master_syllabus}.id = {course_syllabus}.master_syllabus_id JOIN {syllabus} ON {course_syllabus}.id = {syllabus}.selected_course_syllabus JOIN {course_modules} ON {syllabus}.id = {course_modules}.instance WHERE {course_modules}.id = ?", array($instance_id));
-
+/*$result = $DB->get_records_sql("SELECT {master_syllabus}.*, {course_syllabus}.* 
+    FROM {master_syllabus} JOIN {course_syllabus} ON {master_syllabus}.id = 
+    {course_syllabus}.master_syllabus_id JOIN {syllabus} ON {course_syllabus}.id
+    = {syllabus}.selected_course_syllabus JOIN {course_modules} ON {syllabus}.id
+    = {course_modules}.instance WHERE {course_modules}.id = ?", array($instance_id));
+*/
 foreach($result as $key => $value) {
     $syllabus = $value;
 }
