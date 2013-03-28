@@ -307,6 +307,28 @@ return $semesters;
 }
 
 /**
+ * Given a course syllabus id number checks whether it is used in mdl_syllabus 
+ *  as  selected course syllabus
+ *  @param int $syllabusid  master id number 
+ *  @return int Course id number
+ */
+function syllabus_course_has_selected ($syllabusid){
+    global $DB;
+    if($syllabusid){
+        $sql = "select * from {syllabus} where selected_course_syllabus = $syllabusid";
+        $result = $DB->get_record_sql($sql);
+        
+    }
+    else{
+        return false;
+    }
+    
+    return $result->course;
+}
+
+
+
+/**
  * @return string 
  */
 function syllabus_print($syllabus) {

@@ -91,7 +91,20 @@ echo $OUTPUT->header();
                         
                         echo '<tr';
                     }
-                    echo '><td>'.$course_number.'</td><td>'.$section_num.'</td><td>'.$title.'</td><td>'.$year.'</td><td>'.$semester.'</td><td class="syllabus-center">';
+                    
+                    //check if class is active by checking if there is an instance with syllabus id
+                    
+                    $courseMoodleId=syllabus_course_has_selected($syllabusid);
+                    
+                    if($courseMoodleId) {
+                        $titlelink = "<a href=$CFG->wwwroot/course/view.php?id=$courseMoodleId>$title</a>";
+                    }
+                    else {
+                        $titlelink = "<strike>$title</br> $courseMoodleId</strike>";
+                    }
+                    
+                    
+                    echo '><td>'.$course_number.'</td><td>'.$section_num.'</td><td>'.$titlelink.'</td><td>'.$year.'</td><td>'.$semester.'</td><td class="syllabus-center">';
                     
                    
                     echo '<a href="'.$CFG->wwwroot.'/mod/syllabus/public-view.php?id='.$value->instance.'">Public Link</a>'; 
@@ -102,4 +115,28 @@ echo $OUTPUT->header();
                 
                 ?>
                 </table>
+    <table class="syllabus-table"><colgroup><col /></colgroup>
+                
+                <tr class="heading"><th>Courses with Syllabus Instances but no Syllabus Selected</th></tr>
+                <?php
+                $result = $DB->get_records_sql('select course from {syllabus} where selected_course_syllabus is null');
+                $i=1;
+                foreach($result as $key=>$value) {
+                             
+                if($i % 2 == 0) {
+                    
+                        echo '<tr class="alt"';
+                        
+                    } else {
+                        
+                        echo '<tr';
+                    }
+                    
+                echo ">";
+                echo "<td><a href=$CFG->wwwroot/course/view.php?id=$value->course>Course $value->course</a></td>";
+                echo "</tr>";
+                $i++;
+                }
+                ?>
+    </table>
 </div>
