@@ -122,7 +122,9 @@ global $CFG, $DB;
                         <input class="required" type="text" name="instructor_email" value="<?php echo $result[$syllabusid]->instructor_email; ?>" /><br />
                         <label for="instructor_phone">Instructor Phone</label>
                         <input type="text" name="instructor_phone" value="<?php echo $result[$syllabusid]->instructor_phone; ?>" /><br />
-                        
+                        <label for="instructor_hours" class="textarea">Instructor Office Hours</label>
+                        <?php $value = $result[$syllabusid]->instructor_hours; ?>
+                        <?php print_textarea(1, 25, 65, 400, 300, 'instructor_hours', $value); ?><br />
                         <label for="course_requirements" class="textarea">Course Requirements</label>
                         <?php $value = $result[$syllabusid]->course_requirements; ?>
                         <?php print_textarea(1, 25, 65, 400, 300, 'course_requirements', $value); ?><br />

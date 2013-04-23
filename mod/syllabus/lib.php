@@ -376,6 +376,7 @@ function syllabus_print($syllabus) {
         </table>   
 <hr style=\"color: #555 !important;\" > 
 		<div style=\"margin-left: 8px;\"> <!-- START <p> left margin -->
+        <strong>INSTRUCTOR OFFICE HOURS</strong> $syllabus->instructor_hours        
         <strong>PREREQUISITES</strong> $syllabus->prerequisites
         <strong>COREQUISITES</strong> $syllabus->corequisites
         <strong>CATALOG DESCRIPTION</strong> $syllabus->catalog_desc

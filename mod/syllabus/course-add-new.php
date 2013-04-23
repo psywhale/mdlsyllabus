@@ -104,6 +104,8 @@ global $CFG, $DB;
                         <input class="required" type="text" name="instructor_email" /><br />
                         <label for="instructor_phone">Instructor Phone</label>
                         <input type="text" name="instructor_phone" /><br />
+                        <label for="instructor_hours" class="textarea">Instructor Hours</label>
+                        <?php print_textarea(1, 25, 65, 200, 300, 'textbook'); ?><br />
                         <label for="textbook" class="textarea">Textbook</label>
                         <?php print_textarea(1, 25, 65, 200, 300, 'textbook'); ?><br />
                         

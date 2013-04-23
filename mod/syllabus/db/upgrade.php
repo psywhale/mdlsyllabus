@@ -178,6 +178,20 @@ function xmldb_syllabus_upgrade($oldversion) {
         upgrade_mod_savepoint(true, 2013021200, 'syllabus');
     }
 
+        if ($oldversion < 2013042300) {
+
+        // Define field instructor_hours to be added to course_syllabus
+        $table = new xmldb_table('course_syllabus');
+        $field = new xmldb_field('instructor_hours', XMLDB_TYPE_TEXT, null, null, null, null, null, 'instructor_phone');
+
+        // Conditionally launch add field instructor_hours
+        if (!$dbman->field_exists($table, $field)) {
+            $dbman->add_field($table, $field);
+        }
+
+        // syllabus savepoint reached
+        upgrade_mod_savepoint(true, 2013042300, 'syllabus');
+    }
      
 
 
