@@ -404,7 +404,7 @@ function syllabus_print($syllabus) {
              Students may request a transcript by visiting the Office of Admissions or logging into their Campus Connect account.  For more information go to <a href=http://wosc.edu//admissions#transcripts>WOSC Transcripts webpage</a>
      
            <br/><br/>
-        <strong>STUDENTS RECIEVING TITLE IV FEDERAL AID (GRANTS,LOANS,WORK-STUDY,ETC..)</strong> <br/>
+        <strong>STUDENTS RECEIVING TITLE IV FEDERAL AID (GRANTS,LOANS,WORK-STUDY,ETC..)</strong> <br/>
               If you withdraw or do not successfully complete the hours your aid was calculated on, or quit attending class before the 60% point of the semester, you may owe a refund to the Title IV Program.<br/><br/>
 Class attendance is a requirement to receive Title IV Federal Aid.   On-line students must submit work to be certified as attending. Failure to attend class will delay and could void your aid.
      
