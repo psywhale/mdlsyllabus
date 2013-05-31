@@ -412,6 +412,29 @@ Class attendance is a requirement to receive Title IV Federal Aid.   On-line stu
         <strong>ADA STATEMENT</strong> <br/>
            WOSC is committed to providing support services to physically and learning disabled students.  These services are guided by Section 504 of the Rehabilitation Act of 1973 and the Americans with Disabilities Act of 1990 which prohibits discrimination against otherwise qualified individuals with disabilities, and mandates that reasonable accommodations be made for such persons. <a href=\"http://www.wosc.edu/index.php?page=counseling\">Complete ADA Policy available</a> 
            <br/><br/>
+        <strong>EMAILS</strong> <br/>
+            Please email the instructor with any concerns or questions about the course using the course email link inside Moodle. Always remember to be respectful and use appropriate language. All students should expect a response within an appropriate amount of time. (16, 8, & 4 weeks within 48 hours).
+        <br/><br/>
+
+        <strong> Netiquette: Etiquette for Communicating Online </strong> <br/>
+        <p>Most, if not all, of the communication in online courses will occur online, which poses both benefits and challenges. It means that we can craft our responses effectively. If, however, we don't take the time to craft our responses, we can communicate unintended messages.
+</p>
+<p>It is sometimes difficult to remember that there are real people reading our messages. Words can mean many things, and what we intend to say is not always what others hear. This is especially true of \"online communication\" where others do not have the opportunity to see your \"body language\" or hear your tone; therefore, they have a greater possibility of misunderstanding what you truly mean. For those reasons, users of the Internet have come up with guidelines for net communication aimed at lessening the chances of miscommunication and perceived disrespect.
+</p>
+<p>Please, follow these guidelines in all of your online responses and discussion groups.
+</p>
+<p>Respect all who are participating in this learning community by
+<ul><li>honoring their right to their opinions
+<li>respecting the right of each person to disagree with others
+<li>responding honestly but thoughtfully and respectfully using language which others will not consider foul or abusive
+<li>always signing your name to any contribution you choose to make
+<li>respecting your own privacy and the privacy of others by not revealing information which you deem private and which you feel might embarrass you or others
+<li>being constructive in your responses to others in the class
+<li>being prepared to clarify statements which might be misunderstood or misinterpreted by others
+<li>One good way to avoid problems is to compose your postings off-line and reread them before sending them. Something written in haste may not say what you really think after the heat of the moment has passed.
+</ul></p>
+        <br/><br/>
+
         <strong>SUBJECT TO CHANGE NOTICE</strong> <br/>This syllabus is subject to change at any point during the course. If changes are made to the syllabus, all affected students will be notified by the method(s) listed in the Syllabus Change Notification section.<br/><br/>
         <strong>SYLLABUS CHANGE NOTIFICATION METHOD</strong> $syllabus->notify_method
         <strong>COURSE COMPETENCIES</strong> $syllabus->course_competencies
