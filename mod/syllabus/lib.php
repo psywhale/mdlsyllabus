@@ -383,7 +383,11 @@ function syllabus_print($syllabus) {
         <strong>TEXTBOOK</strong> $syllabus->textbook
         <strong>SUPPLIES</strong> $syllabus->supplies
         <strong>LEARNING OUTCOMES</strong> $syllabus->learning_outcomes
-        
+        ";
+   if($syllabus->getting_started != "") {
+       $syllabus_html .= "<strong>GETTING STARTED WITH THIS COURSE</strong> $syllabus->getting_started";
+   }
+   $syllabus_html .= "
         <strong>COURSE REQUIREMENTS</strong> $syllabus->course_requirements
         <strong>ATTENDANCE POLICY</strong> $syllabus->attendance_policy
         <strong>GRADING SCALE</strong> $syllabus->grading_policy

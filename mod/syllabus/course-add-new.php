@@ -111,6 +111,8 @@ global $CFG, $DB;
                         
                         <label for="supplies" class="textarea">Supplies</label>
                         <?php print_textarea(1, 25, 65, 200, 300, 'supplies'); ?><br />
+                        <label for="getting_started" class="textarea">Getting Started Information**</label>
+                        <?php print_textarea(1, 25, 65, 200, 300, 'getting_started'); ?><br />
                         <label for="course_requirements" class="textarea">Course Requirements</label>
                         <?php print_textarea(1, 25, 65, 200, 300, 'course_requirements',$result[$syllabusid]->course_requirements); ?><br />
                         <label for="attendance_policy" class="textarea">Attendance Policy</label>
@@ -123,12 +125,12 @@ global $CFG, $DB;
                         
                         <label for="additional_info" class="textarea">Additional Info</label>
                         <?php print_textarea(1, 25, 65, 200, 300, 'additional_info'); ?><br />
-                         <label for="notify_method" class="textarea">Syllabus Change Notificaton Method</label>
+                         <label for="notify_method" class="textarea">Syllabus Change Notification Method</label>
                         <?php print_textarea(1, 25, 65, 200, 300, 'notify_method'); ?><br />
                         
                         <input type="submit" value="Add" name="submit-add-new"/> <input type="submit" value="Cancel" id="course-add-cancel" name="cancel" />
                     </form>
-                    <p>* Required fields.</p>
+                    <p>* Required fields.<br/>** Optional Fields (leave blank if not required)</p>
 		</div>
                 
                 

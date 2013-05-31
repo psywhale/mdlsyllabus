@@ -192,6 +192,21 @@ function xmldb_syllabus_upgrade($oldversion) {
         // syllabus savepoint reached
         upgrade_mod_savepoint(true, 2013042300, 'syllabus');
     }
+    
+        if ($oldversion < 2013053100) {
+
+        // Define field getting_started to be added to course_syllabus
+        $table = new xmldb_table('course_syllabus');
+        $field = new xmldb_field('getting_started', XMLDB_TYPE_TEXT, null, null, null, null, null, 'course_requirements');
+
+        // Conditionally launch add field getting_started
+        if (!$dbman->field_exists($table, $field)) {
+            $dbman->add_field($table, $field);
+        }
+
+        // syllabus savepoint reached
+        upgrade_mod_savepoint(true, 2013053100, 'syllabus');
+    }
      
 
 

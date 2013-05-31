@@ -125,6 +125,9 @@ global $CFG, $DB;
                         <label for="instructor_hours" class="textarea">Instructor Office Hours</label>
                         <?php $value = $result[$syllabusid]->instructor_hours; ?>
                         <?php print_textarea(1, 25, 65, 400, 300, 'instructor_hours', $value); ?><br />
+                        <label for="getting_started" class="textarea">Getting Started Information**</label>
+                        <?php $value = $result[$syllabusid]->getting_started; ?>
+                        <?php print_textarea(1, 25, 65, 200, 300, 'getting_started',$value); ?><br />
                         <label for="course_requirements" class="textarea">Course Requirements</label>
                         <?php $value = $result[$syllabusid]->course_requirements; ?>
                         <?php print_textarea(1, 25, 65, 400, 300, 'course_requirements', $value); ?><br />
@@ -159,7 +162,7 @@ global $CFG, $DB;
                         
                         <input type="submit" value="Update" name="submit-edit"/> <input type="submit" value="Cancel" id="course-edit-cancel" name="cancel" />
                     </form>
-                    <p>* Required fields.</p>
+                    <p>* Required fields.<br/>** Optional Fields (leave blank if not required)</p>
 		</div>
                 
                 
