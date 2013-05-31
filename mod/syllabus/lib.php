@@ -396,10 +396,11 @@ function syllabus_print($syllabus) {
            A student may withdraw from one of more classes with an automatic grade of \"W\". Please read the complete withdraw policy located in <a href=\"http://www.wosc.edu/index.php?page=College-Catalog\">College Catalog</a>.
      
            <br/><br/>
-        <strong>TUTORING</strong> <br/>
-            Western provides FREE tutoring for students experiencing academic difficulty. Peer tutoring is available in A-4 and online tutoring is available at Tutor.com. For more information regarding these services visit the <a href=\"http://wosc.edu//index.php?page=peer-tutoring\">Tutoring web page</a>.
+        <strong>STUDENT SERVICE INFORMATION</strong> <br/>
+            <p>Western Oklahoma State College offers a variety of resources to ensure student success. Tutor.com is a free online tutoring service that can be accessed 24 hours a day through the online portal. Peer tutoring is offered in multiple subject areas and can be found in A-4. Students who qualify for WINDS (federally funded TRIO grant) can access professional tutors in SSC202. Virtual Western is an online orientation also found on the online portal. All of these services are free to Western students and can be instrumental in navigating the collegiate experience.</p>
+            <p> For more information regarding these services visit the <a href=\"http://wosc.edu//index.php?page=peer-tutoring\">Tutoring web page</a>.</p>
      
-           <br/><br/>
+           <br/>
         <strong>TRANSCRIPTS</strong> <br/>
              Students may request a transcript by visiting the Office of Admissions or logging into their Campus Connect account.  For more information go to <a href=http://wosc.edu//admissions#transcripts>WOSC Transcripts webpage</a>
      
