@@ -95,7 +95,7 @@ global $CFG, $DB;
                         <?php $value = $result[$syllabusid]->course_competencies; ?>
                         <?php print_textarea(1, 25, 65, 400, 300, 'course_competencies', $value); ?><br />
                         
-                        <label for="assessment" class="textarea">Assessment</label>
+                        <label for="assessment" class="textarea">Course Assessment (Evaluation)</label>
                         <?php $value = $result[$syllabusid]->assessment; ?>
                         <?php print_textarea(1, 25, 65, 400, 300, 'assessment', $value); ?><br />
                         

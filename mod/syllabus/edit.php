@@ -110,63 +110,15 @@ if(empty($course)) {
                         <input type="text" class="required" name="heading" id="heading" /><br />
                         <label for="department">Department*</label>
                         <input type="text" class="required" name="department" /><br />
-                                <?php
-                //get all course titles from Moodle
-                $result = $DB->get_records_sql("SELECT id,fullname FROM {course}");
                 
-                $titles = array();
-                $ids = array();
-                
-                foreach($result as $key => $value) {
-                    $titles[] = $value->fullname;
-                    $ids[] = $value->id;
-                }
-                ?>
                               
                 
                 
                 <label for="title">Course Title <a href="#" title="Help with course titles." onclick="alert('In order for a course title to appear in this list, the course must first be created in Moodle.')"><img src="<?php echo $OUTPUT->pix_url('help', 'moodle'); ?>" alt="Help with course titles." /></a></label>
-                <select name="title" id="title">
-                    <?php
-                    foreach($titles as $key => $value) {
-                        echo '<option>'.$value.'</option>';
-                    }
-                    ?>
-                </select><br />
+                <input type="text" class="required" name="title" /><br />
+                <br />
                 <input type="hidden" id="course_id" name="course_id" value="" />
-                <?php
-		$now = date('Y');
-		
-		$years[$now] = $now;
-		
-		for ($i=0; $i <= 9; $i++) {
-			
-			$now = $now + 1;
-			
-			$years[$now] = $now;
-		}
-		?>
-                        <label for="year">Year</label>
-                        <select name="year"><br/>
-                        <?php
-                        foreach($years as $key => $value) {
-                            echo '<option>'.$value.'</option>';
-                        }
-                        ?>
-                        </select><br />
-                        <label for="semester">Semester</label>
-                        <?php
-                        echo "<select name=semester>";
-                        $semesters = syllabus_get_semesters();
-                        foreach($semesters as $key => $value) {
-                                if($value == $result[$syllabusid]->semester) {
-                                    echo '<option selected="selected">'.$value.'</option>';
-                                } else {
-                                    echo '<option>'.$value.'</option>';
-                                }
-                            }
-                        echo "</select>";
-                        ?>
+   
                         <br />
                 
                         <label for="credits">Credits*</label>
@@ -182,12 +134,12 @@ if(empty($course)) {
                         <?php print_textarea(1, 25, 65, 400, 300, 'learning_outcomes'); ?><br />
                         <label for="course_requirements" class="textarea">Course Requirements</label>
                         <?php print_textarea(1, 25, 65, 400, 300, 'course_requirements'); ?><br />
-                        <label for="attendance_policy" class="textarea">Attendance Policy</label>
+                        <label for="attendance_policy" class="textarea">Attendance Policy </br>(Template)</label>
                         <?php print_textarea(1, 25, 65, 400, 300, 'attendance_policy'); ?><br />
                         
                         <label for="course_competencies" class="textarea">Course Competencies</label>
                         <?php print_textarea(1, 25, 65, 400, 300, 'course_competencies'); ?><br />
-                        <label for="assessment" class="textarea">Assessment</label>
+                        <label for="assessment" class="textarea">Course Assessment (Evaluation)</br>(Template)</label>
                         <?php print_textarea(1, 25, 65, 400, 300, 'assessment'); ?><br />
                         
                         <input type="submit" value="Add" name="submit"/> <input type="submit" value="Cancel" id="master-add-new-cancel" name="cancel" />
