@@ -63,7 +63,7 @@ global $CFG, $DB;
 
 <br />
                 
-                        <label for="credits">Credits*</label>
+<label for="credits">Credits*<?php syllabus_helper("help for Credits", "Number of credits class is worth")?></label>
                         <input type="text" class="required" name="credits" value="<?php echo $result[$syllabusid]->credits; ?>" /><br />
                         <label for="prerequisites" class="textarea">Prerequisites</label>
                         <?php $value = $result[$syllabusid]->prerequisites; ?>

@@ -474,3 +474,11 @@ table#syllabus_table td { margin: -20px 0 !important; text-overflow: ellipsis;}
    
    return $syllabus_html;
 }
+
+function syllabus_helper($title = "NEED TITLE", $helptext = "helptext needed") {
+    global $CFG,$PAGE,$OUTPUT;
+    echo "
+    <a href=\"#\" title=\"$title\" onclick=\"alert('$helptext')\"><img src=\"".$OUTPUT->pix_url('help', 'moodle')."\" alt=\"$title\" /></a>
+        ";
+    
+}
