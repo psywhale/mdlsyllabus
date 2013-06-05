@@ -376,12 +376,17 @@ function syllabus_print($syllabus) {
         </table>   
 <hr style=\"color: #555 !important;\" > 
 		<div style=\"margin-left: 8px;\"> <!-- START <p> left margin -->
-        <strong>INSTRUCTOR OFFICE HOURS</strong> $syllabus->instructor_hours        
+        <strong>INSTRUCTOR INFORMATION</strong> $syllabus->instructor_hours        
         <strong>PREREQUISITES</strong> $syllabus->prerequisites
         <strong>COREQUISITES</strong> $syllabus->corequisites
         <strong>CATALOG DESCRIPTION</strong> $syllabus->catalog_desc
-        <strong>TEXTBOOK</strong> $syllabus->textbook
-        <strong>SUPPLIES</strong> $syllabus->supplies
+        <strong>TEXTBOOK</strong> $syllabus->textbook";
+   if($syllabus->supplies != "") {
+       $syllabus_html .= "<strong>SUPPLIES</strong> $syllabus->supplies";
+   }
+   
+        $syllabus_html .= "    
+        
         <strong>LEARNING OUTCOMES</strong> $syllabus->learning_outcomes
         ";
    if($syllabus->getting_started != "") {
