@@ -128,17 +128,21 @@ global $CFG, $DB;
                         <label for="getting_started" class="textarea">Getting Started Information**</label>
                         <?php $value = $result[$syllabusid]->getting_started; ?>
                         <?php print_textarea(1, 25, 65, 200, 300, 'getting_started',$value); ?><br />
-                        <label for="course_requirements" class="textarea">Course Requirements</label>
-                        <?php $value = $result[$syllabusid]->course_requirements; ?>
-                        <?php print_textarea(1, 25, 65, 400, 300, 'course_requirements', $value); ?><br />
-                        
                         <label for="textbook" class="textarea">Textbook</label>
                         <?php $value = $result[$syllabusid]->textbook; ?>
                         <?php print_textarea(1, 25, 65, 400, 300, 'textbook', $value); ?><br />
                         
                         <label for="supplies" class="textarea">Supplies</label>
                         <?php $value = $result[$syllabusid]->supplies; ?>
-                        <?php print_textarea(1, 25, 65, 400, 300, 'supplies', $value); ?><br />
+                        <?php print_textarea(1, 25, 65, 400, 300, 'supplies', $value); ?><br />                        
+                        
+                        <label for="course_requirements" class="textarea">Course Requirements</label>
+                        <?php $value = $result[$syllabusid]->course_requirements; ?>
+                        <?php print_textarea(1, 25, 65, 400, 300, 'course_requirements', $value); ?><br />
+                        <label for="format_purpose" class="textarea">Course Structure and Purpose</label>
+                        <?php $value = $result[$syllabusid]->format_purpose; ?>
+                        <?php print_textarea(1, 25, 65, 400, 300, 'format_purpose', $value); ?><br />
+
                         
                         <label for="attendance_policy" class="textarea">Attendance Policy</label>
                         <?php $value = $result[$syllabusid]->attendance_policy; ?>
@@ -147,7 +151,7 @@ global $CFG, $DB;
                         <?php $value = $result[$syllabusid]->grading_policy; ?>
                         <?php print_textarea(1, 25, 65, 400, 300, 'grading_policy', $value); ?><br />
                         
-                        <label for="assessment" class="textarea">Course Assessment</label>
+                        <label for="assessment" class="textarea">Course Assessment (Evaluation)</label>
                         <?php $value = $result[$syllabusid]->assessment; ?>
                         <?php print_textarea(1, 25, 65, 400, 300, 'assessment', $value); ?><br />
                         

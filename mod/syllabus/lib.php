@@ -394,6 +394,7 @@ function syllabus_print($syllabus) {
    }
    $syllabus_html .= "
         <strong>COURSE REQUIREMENTS</strong> $syllabus->course_requirements
+        <strong>COURSE PURPOSE AND STRUCTURE</strong> $syllabus->format_purpose    
         <strong>ATTENDANCE POLICY</strong> $syllabus->attendance_policy
         <strong>GRADING SCALE</strong> $syllabus->grading_policy
         <strong>ACADEMIC ETHICS</strong> <br />Western Oklahoma State College is committed to instilling and upholding integrity as a core value. All members of the Western Oklahoma State College community are entrusted with academic integrity, which encompasses the fundamental values of honesty, trust, respect, fairness, and responsibility. Western is devoted to maintaining an honest academic environment and ensures fair resolution of alleged violations of academic integrity.
