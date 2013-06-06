@@ -51,7 +51,7 @@ global $CFG, $DB;
                 </div>
 <div class="syllabus-form-body" id="master-syllabus-edit">
                     <form id="master-edit" action="" method="POST">
-                        <input type="hidden" name="id" value="<?php echo $syllabusid; ?>" />
+                        <input type="hidden" name="id" value="<?php echo $syllabusid;?>" />
                         <label for="course_number">Course Number*</label>
                         <input type="text" class="required" name="course_number" value="<?php echo $result[$syllabusid]->course_number; ?>" /><br/>
                         <label for="heading">Heading*</label>
@@ -81,11 +81,13 @@ global $CFG, $DB;
                         <?php $value = $result[$syllabusid]->learning_outcomes; ?>
                         <?php print_textarea(1, 25, 65, 400, 300, 'learning_outcomes', $value); ?><br />
                         
-                        <label for="course_requirements" class="textarea">Course Requirements</label>
+                        <label for="course_requirements" class="textarea">Course Requirements<br/>(Template
+                            <?php syllabus_helper("Template", get_string("SyllabusTemplateHelp","syllabus"))?>)</label>
                         <?php $value = $result[$syllabusid]->course_requirements; ?>
                         <?php print_textarea(1, 25, 65, 400, 300, 'course_requirements', $value); ?><br />
                         
-                        <label for="attendance_policy" class="textarea">Attendance Policy</label>
+                        <label for="attendance_policy" class="textarea">Attendance Policy<br/>(Template
+                            <?php syllabus_helper("Template", get_string("SyllabusTemplateHelp","syllabus"))?>)</label>
                         <?php $value = $result[$syllabusid]->attendance_policy; ?>
                         <?php print_textarea(1, 25, 65, 400, 300, 'attendance_policy', $value); ?><br />
                         
@@ -95,7 +97,8 @@ global $CFG, $DB;
                         <?php $value = $result[$syllabusid]->course_competencies; ?>
                         <?php print_textarea(1, 25, 65, 400, 300, 'course_competencies', $value); ?><br />
                         
-                        <label for="assessment" class="textarea">Course Assessment (Evaluation)</label>
+                        <label for="assessment" class="textarea">Course Assessment (Evaluation)<br/>(Template
+                            <?php syllabus_helper("Template", get_string("SyllabusTemplateHelp","syllabus"))?>)</label>
                         <?php $value = $result[$syllabusid]->assessment; ?>
                         <?php print_textarea(1, 25, 65, 400, 300, 'assessment', $value); ?><br />
                         

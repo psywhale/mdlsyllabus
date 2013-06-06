@@ -132,14 +132,17 @@ if(empty($course)) {
                         <?php print_textarea(1, 25, 65, 400, 300, 'catalog_desc'); ?><br />
                         <label for="learning_outcomes" class="textarea">Learning Outcomes</label>
                         <?php print_textarea(1, 25, 65, 400, 300, 'learning_outcomes'); ?><br />
-                        <label for="course_requirements" class="textarea">Course Requirements</label>
+                        <label for="course_requirements" class="textarea">Course Requirements</br>(Template
+                            <?php syllabus_helper("Template", get_string("SyllabusTemplateHelp","syllabus"))?>)</label>
                         <?php print_textarea(1, 25, 65, 400, 300, 'course_requirements'); ?><br />
-                        <label for="attendance_policy" class="textarea">Attendance Policy </br>(Template)</label>
+                        <label for="attendance_policy" class="textarea">Attendance Policy </br>(Template
+                            <?php syllabus_helper("Template", get_string("SyllabusTemplateHelp","syllabus"))?>)</label>
                         <?php print_textarea(1, 25, 65, 400, 300, 'attendance_policy'); ?><br />
                         
                         <label for="course_competencies" class="textarea">Course Competencies</label>
                         <?php print_textarea(1, 25, 65, 400, 300, 'course_competencies'); ?><br />
-                        <label for="assessment" class="textarea">Course Assessment (Evaluation)</br>(Template)</label>
+                        <label for="assessment" class="textarea">Course Assessment (Evaluation)</br>(Template
+                            <?php syllabus_helper("Template", get_string("SyllabusTemplateHelp","syllabus"))?>)</label>
                         <?php print_textarea(1, 25, 65, 400, 300, 'assessment'); ?><br />
                         
                         <input type="submit" value="Add" name="submit"/> <input type="submit" value="Cancel" id="master-add-new-cancel" name="cancel" />

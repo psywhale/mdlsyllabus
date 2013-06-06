@@ -38,3 +38,5 @@ $string['departmenterror'] = 'Please enter a department.';
 $string['creditserror'] = 'Please enter credits.';
 $string['SyllabusMasterClass'] = "Class ID";
 $string['SyllabusMasterClassDescription'] = "The Class ID that will hold the master list of course syllabii";
+$string['SyllabusTemplateHelp'] ="This field is used as a template for Course Syllabi based on this master. Instructors will see text put here for each class that uses this Master,but will be able to change a copy for their course";
+
