@@ -431,7 +431,7 @@ Class attendance is a requirement to receive Title IV Federal Aid.   On-line stu
             Please email the instructor with any concerns or questions about the course using the course email link inside Moodle. Always remember to be respectful and use appropriate language. All students should expect a response within an appropriate amount of time. (16, 8, & 4 weeks within 48 hours).
         <br/><br/>
 
-        <strong> Netiquette: Etiquette for Communicating Online </strong> <br/>
+        <strong> NETIQUETTE: ETIQUETTE FOR COMMUNICATING ONLINE </strong> <br/>
         <p>Most, if not all, of the communication in online courses will occur online, which poses both benefits and challenges. It means that we can craft our responses effectively. If, however, we don't take the time to craft our responses, we can communicate unintended messages.
 </p>
 <p>It is sometimes difficult to remember that there are real people reading our messages. Words can mean many things, and what we intend to say is not always what others hear. This is especially true of \"online communication\" where others do not have the opportunity to see your \"body language\" or hear your tone; therefore, they have a greater possibility of misunderstanding what you truly mean. For those reasons, users of the Internet have come up with guidelines for net communication aimed at lessening the chances of miscommunication and perceived disrespect.
