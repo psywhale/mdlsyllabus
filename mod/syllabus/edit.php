@@ -265,7 +265,7 @@ if(empty($course)) {
                 <tr class="heading"><th>Course</th><th>Year</th><th>Semester</th><th>Action</th></tr>
                 <?php
                 //Get all records from course_syllabus that were created for this instance 
-                $result = $DB->get_records_sql('SELECT {course_syllabus}.id, {master_syllabus}.course_id, {master_syllabus}.course_number, {master_syllabus}.year, {master_syllabus}.semester FROM {course_syllabus} JOIN {master_syllabus} ON {course_syllabus}.master_syllabus_id = {master_syllabus}.id WHERE {course_syllabus}.instance = ? ORDER BY {master_syllabus}.course_number ASC', array($instance_id));
+                $result = $DB->get_records_sql('SELECT {course_syllabus}.id, {master_syllabus}.course_id, {master_syllabus}.course_number, {course_syllabus}.year, {course_syllabus}.semester FROM {course_syllabus} JOIN {master_syllabus} ON {course_syllabus}.master_syllabus_id = {master_syllabus}.id WHERE {course_syllabus}.instance = ? ORDER BY {master_syllabus}.course_number ASC', array($instance_id));
                 // get the selected course syllabus for this instance
                 $instanceresult = $DB->get_records_sql('SELECT {syllabus}.id, {syllabus}.selected_course_syllabus FROM {syllabus} JOIN {course_modules} ON {syllabus}.id = {course_modules}.instance WHERE {course_modules}.id = ?', array($instance_id));
                 if(!empty($instanceresult)) {
@@ -316,7 +316,7 @@ if(empty($course)) {
                 </div>
                     <?php 
                     //  select which master syllabus to use as a template
-                   $result = $DB->get_records_sql("SELECT id,course_number,semester,year FROM {master_syllabus} ORDER BY {master_syllabus}.course_number ASC");
+                   $result = $DB->get_records_sql("SELECT id,course_number,title FROM {master_syllabus} ORDER BY {master_syllabus}.course_number ASC");
                    ?>
                 <div class="syllabus-form-body" id="course-syllabus-add-new">
                     <p>Please select a master syllabus to use as a template:</p>
@@ -334,9 +334,9 @@ if(empty($course)) {
                    $i = 1;
                    foreach($result as $key => $value) {
                        if ($i % 2 == 0) {
-                           echo '<tr class="alt"><td style="width:10px"><input type="radio" name="select-template" value="'.$value->id.'"></td><td>'.$value->course_number.'</td><td>'.$value->year.'</td><td>'.$value->semester.'</td></tr>';
+                           echo '<tr class="alt"><td style="width:10px"><input type="radio" name="select-template" value="'.$value->id.'"></td><td>'.$value->course_number.'</td><td>'.$value->title.'</td></tr>';
                        } else {
-                           echo '<tr><td style="width:10px"><input type="radio" name="select-template" value="'.$value->id.'"></td><td>'.$value->course_number.'</td><td>'.$value->year.'</td><td>'.$value->semester.'</td></tr>';
+                           echo '<tr><td style="width:10px"><input type="radio" name="select-template" value="'.$value->id.'"></td><td>'.$value->course_number.'</td><td>'.$value->title.'</td></tr>';
                        }
                        $i++;
                    }
