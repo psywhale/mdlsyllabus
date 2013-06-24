@@ -222,6 +222,31 @@ function xmldb_syllabus_upgrade($oldversion) {
         // syllabus savepoint reached
         upgrade_mod_savepoint(true, 2013060600, 'syllabus');
     }
+    
+     if ($oldversion < 2013062400) {
+
+        // Define field year to be dropped from master_syllabus
+        $table = new xmldb_table('master_syllabus');
+        $field = new xmldb_field('year');
+
+        // Conditionally launch drop field year
+        if ($dbman->field_exists($table, $field)) {
+            $dbman->drop_field($table, $field);
+        }
+        
+        $table = new xmldb_table('master_syllabus');
+        $field = new xmldb_field('semester');
+
+        // Conditionally launch drop field year
+        if ($dbman->field_exists($table, $field)) {
+            $dbman->drop_field($table, $field);
+        }
+
+
+        // syllabus savepoint reached
+        upgrade_mod_savepoint(true, 2013062400, 'syllabus');
+    }
+
      
 
 

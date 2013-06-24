@@ -116,7 +116,7 @@ global $CFG, $DB;
                         <label for="course_requirements" class="textarea">Course Requirements</label>
                         <?php print_textarea(1, 25, 65, 200, 300, 'course_requirements',$result[$syllabusid]->course_requirements); ?><br />
                         <label for="format_purpose" class="textarea">Course Structure and Purpose</label>
-                        <?php print_textarea(1, 25, 65, 200, 300, 'course_requirements',$result[$syllabusid]->format_purpose); ?><br />
+                        <?php print_textarea(1, 25, 65, 200, 300, 'format_purpose',$result[$syllabusid]->format_purpose); ?><br />
                         <label for="attendance_policy" class="textarea">Attendance Policy</label>
                         <?php print_textarea(1, 25, 65, 200, 300, 'attendance_policy'); ?><br />
                         <label for="grading_policy" class="textarea">Grading Policy</label>

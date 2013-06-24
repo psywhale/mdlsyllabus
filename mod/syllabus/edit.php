@@ -68,11 +68,11 @@ if(empty($course)) {
                 
                 <table class="syllabus-table"><colgroup><col /><col /><col /><col /></colgroup>
                 
-                <tr class="heading"><th>Course</th><th>Year</th><th>Semester</th><th>Action</th></tr>
+                <tr class="heading"><th>Course</th><th>Action</th></tr>
                 <?php
                 //Get all records from master_syllabus that exist for this course 
                 //$result = $DB->get_records_sql('SELECT {master_syllabus}.course_number, {master_syllabus}.title FROM {master_syllabus} JOIN {course_modules} ON {master_syllabus}.id = {course_modules}.instance JOIN {modules} ON {modules}.id = {course_modules}.module WHERE {modules}.name = ?', array('syllabus'));
-                $result = $DB->get_records_sql('SELECT {master_syllabus}.id, {master_syllabus}.course_id, {master_syllabus}.course_number, {master_syllabus}.year, {master_syllabus}.semester FROM {master_syllabus} ORDER BY {master_syllabus}.course_number ASC');
+                $result = $DB->get_records_sql('SELECT {master_syllabus}.id, {master_syllabus}.course_id, {master_syllabus}.course_number FROM {master_syllabus} ORDER BY {master_syllabus}.course_number ASC');
                 if(empty($result)) {
                     echo '<tr><td colspan="4" style="text-align:center">Please <a id="add-new-master-syllabus-link" href="#">add a new</a> syllabus.</td></tr>';
                 }
@@ -81,18 +81,18 @@ if(empty($course)) {
                 foreach($result as $key => $value) {
                     
                     $course_number = $value->course_number;
-                    $year = $value->year;
-                    $semester = $value->semester;
+                    //$year = $value->year;
+                    //$semester = $value->semester;
                     $syllabusid = $value->id;
                     $courseid = $value->course_id;
                 
                     if($i % 2 == 0) {
                     
-                        echo '<tr class="alt"><td>'.$course_number.'</td><td>'.$year.'</td><td>'.$semester.'</td><td class="syllabus-center"><a href="master-edit.php?syllabusid='.$syllabusid.'&course_id='.$course.'&instance_id='.$instance_id.'">Edit</a> | <a class="delete-master" href="master-delete.php?syllabusid='.$syllabusid.'&course_id='.$course.'&instance_id='.$instance_id.'">Delete</a></td></tr>';
+                        echo '<tr class="alt"><td>'.$course_number.'</td><td class="syllabus-center"><a href="master-edit.php?syllabusid='.$syllabusid.'&course_id='.$course.'&instance_id='.$instance_id.'">Edit</a> | <a class="delete-master" href="master-delete.php?syllabusid='.$syllabusid.'&course_id='.$course.'&instance_id='.$instance_id.'">Delete</a></td></tr>';
                         
                     } else {
                         
-                        echo '<tr><td>'.$course_number.'</td><td>'.$year.'</td><td>'.$semester.'</td><td class="syllabus-center"><a href="master-edit.php?syllabusid='.$syllabusid.'&course_id='.$course.'&instance_id='.$instance_id.'">Edit</a> | <a class="delete-master" href="master-delete.php?syllabusid='.$syllabusid.'&course_id='.$course.'&instance_id='.$instance_id.'">Delete</a></td></tr>';                                            
+                        echo '<tr><td>'.$course_number.'</td><td class="syllabus-center"><a href="master-edit.php?syllabusid='.$syllabusid.'&course_id='.$course.'&instance_id='.$instance_id.'">Edit</a> | <a class="delete-master" href="master-delete.php?syllabusid='.$syllabusid.'&course_id='.$course.'&instance_id='.$instance_id.'">Delete</a></td></tr>';                                            
                     }
                     
                     $i++;
@@ -164,7 +164,7 @@ if(empty($course)) {
                 <tr class="heading"><th>Course</th><th>Year</th><th>Semester</th><th>Action</th></tr>
                 <?php
                 //Get all records from course_syllabus that were created for this instance 
-                $result = $DB->get_records_sql('SELECT {course_syllabus}.id, {master_syllabus}.course_id, {master_syllabus}.course_number, {master_syllabus}.year, {master_syllabus}.semester FROM {course_syllabus} JOIN {master_syllabus} ON {course_syllabus}.master_syllabus_id = {master_syllabus}.id WHERE {course_syllabus}.instance = ? ORDER BY {master_syllabus}.course_number ASC', array($instance_id));
+                $result = $DB->get_records_sql('SELECT {course_syllabus}.id, {master_syllabus}.course_id, {master_syllabus}.course_number, {course_syllabus}.year, {course_syllabus}.semester FROM {course_syllabus} JOIN {master_syllabus} ON {course_syllabus}.master_syllabus_id = {master_syllabus}.id WHERE {course_syllabus}.instance = ? ORDER BY {master_syllabus}.course_number ASC', array($instance_id));
                 // get the selected course syllabus for this instance
                 $instanceresult = $DB->get_records_sql('SELECT {syllabus}.id, {syllabus}.selected_course_syllabus FROM {syllabus} JOIN {course_modules} ON {syllabus}.id = {course_modules}.instance WHERE {course_modules}.id = ?', array($instance_id));
                 if(!empty($instanceresult)) {
@@ -215,14 +215,14 @@ if(empty($course)) {
                 </div>
                     <?php 
                     //  select which master syllabus to use as a template
-                   $result = $DB->get_records_sql("SELECT id,course_number,semester,year FROM {master_syllabus} order by {master_syllabus}.course_number ASC");
+                   $result = $DB->get_records_sql("SELECT id,course_number,title FROM {master_syllabus} order by {master_syllabus}.course_number ASC");
                    ?>
                 <div class="syllabus-form-body" id="course-syllabus-add-new">
                     <p>Please select a master syllabus to use as a template:</p>
                     <form id="select-template" action="course-add-new.php?course_id=<?php echo $course; ?>&instance_id=<?php echo $instance_id; ?>" method="POST">
                      <table class="syllabus-table"> 
                          <colgroup><col /><col /><col /><col /></colgroup>
-                        <tr class="heading"><th style="width:10px"></th><th>Course Number</th><th>Year</th><th>Semester</th></tr>
+                        <tr class="heading"><th style="width:10px"></th><th>Course Number</th><th>Title</th></tr>
                         
                    <?php
                     
@@ -233,9 +233,9 @@ if(empty($course)) {
                    $i = 1;
                    foreach($result as $key => $value) {
                        if ($i % 2 == 0) {
-                           echo '<tr class="alt"><td style="width:10px"><input type="radio" name="select-template" value="'.$value->id.'"></td><td>'.$value->course_number.'</td><td>'.$value->year.'</td><td>'.$value->semester.'</td></tr>';
+                           echo '<tr class="alt"><td style="width:10px"><input type="radio" name="select-template" value="'.$value->id.'"></td><td>'.$value->course_number.'</td><td>'.$value->title.'</td></tr>';
                        } else {
-                           echo '<tr><td style="width:10px"><input type="radio" name="select-template" value="'.$value->id.'"></td><td>'.$value->course_number.'</td><td>'.$value->year.'</td><td>'.$value->semester.'</td></tr>';
+                           echo '<tr><td style="width:10px"><input type="radio" name="select-template" value="'.$value->id.'"></td><td>'.$value->course_number.'</td><td>'.$value->title.'</td></tr>';
                        }
                        $i++;
                    }
