@@ -396,7 +396,7 @@ function syllabus_print($syllabus) {
         <strong>COURSE REQUIREMENTS</strong> $syllabus->course_requirements
                  ";
    if($syllabus->format_purpose != "") {
-       $syllabus_html .= "<strong>GETTING STARTED WITH THIS COURSE</strong> $syllabus->format_purpose";
+       $syllabus_html .= "<strong>COURSE STRUCTURE AND PURPOSE</strong> $syllabus->format_purpose";
    }
    $syllabus_html .= "   
         <strong>ATTENDANCE POLICY</strong> $syllabus->attendance_policy
