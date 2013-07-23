@@ -326,7 +326,38 @@ function syllabus_course_has_selected ($syllabusid){
     return $result->course;
 }
 
-
+/**
+ * given logged in user's email get all other syllabus with that email
+ * @param char $email 
+ */
+function syllabus_printCloneList($email){
+    global $CFG,$DB;
+    $html="";
+    if($email) {
+        $result=$DB->get_records_sql("select * from {course_syllabus} where instructor_email = \"$email\"");
+        if(empty($result)) {
+            $html = "<tr><td colspan=4>No Cloneable Syllabi Found</td></tr>";
+            return($html);
+                    
+        }else{
+            foreach($result as $key => $value){
+                $html .= "<tr>".
+                        "<td>$value->section_no</td>" .
+                        "<td>$value->section_no</td>" .
+                        "<td>$value->semester $value->year</td>" .
+                        "<td><button>Clone</button></td>" .
+                        "</tr>";
+            }
+         return($html);
+        }
+            
+    }
+    else {
+        return("<tr><td colspan=4>Email Fail</td></tr>");
+    }
+    
+    
+}
 
 /**
  * @return string 

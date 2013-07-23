@@ -159,6 +159,20 @@ if(empty($course)) {
                 
                     <button id="add-new-course-syllabus-button">Add New</button>
                     
+                    <table class="syllabus-table">
+                        <caption>Cloneable Syllabi</caption>
+                        <colgroup><col /><col /><col /><col /></colgroup>
+                        <tr class="heading">
+                            <th>Section #</th>
+                            <th>Title</th>
+                            <th>Year/Sem</th>
+                            <th></th>
+                            
+                            
+                        </tr>
+                        <?php  echo syllabus_printCloneList($USER->email); ?>
+                    </table>
+                    
                     <table class="syllabus-table"><colgroup><col /><col /><col /><col /></colgroup>
                 
                 <tr class="heading"><th>Course</th><th>Year</th><th>Semester</th><th>Action</th></tr>
@@ -259,15 +273,20 @@ if(empty($course)) {
                 <div class="syllabus-form-body" id="course-syllabus-view-all">
                 
                     <button id="add-new-course-syllabus-button">Add New</button>
-                    
-                    <table>
+                 
+                    <table class="syllabus-table">
                         <caption>Cloneable Syllabi</caption>
-                        <tr>
+                        <colgroup><col /><col /><col /><col /></colgroup>
+                        <tr class="heading">
                             <th>Section #</th>
                             <th>Title</th>
                             <th>Year/Sem</th>
+                            <th></th>
+                            
                             
                         </tr>
+                        <?php echo syllabus_printCloneList($USER->email); ?>
+                        
                     </table>
                     
                     <table class="syllabus-table"><colgroup><col /><col /><col /><col /></colgroup>

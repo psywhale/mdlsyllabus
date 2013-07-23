@@ -23,8 +23,8 @@
     </TABLE>
     <TABLE NAME="master_syllabus" COMMENT="Defines master syllabus" PREVIOUS="syllabus" NEXT="course_syllabus">
       <FIELDS>
-        <FIELD NAME="id" TYPE="int" NOTNULL="true" SEQUENCE="true" NEXT="course_id"/>
-        <FIELD NAME="course_id" TYPE="int" NOTNULL="true" SEQUENCE="false" PREVIOUS="id" NEXT="course_number"/>
+        <FIELD NAME="id" TYPE="int" LENGTH="10" NOTNULL="true" SEQUENCE="true" NEXT="course_id"/>
+        <FIELD NAME="course_id" TYPE="int" LENGTH="10" NOTNULL="true" SEQUENCE="false" PREVIOUS="id" NEXT="course_number"/>
         <FIELD NAME="course_number" TYPE="char" LENGTH="255" NOTNULL="true" SEQUENCE="false" PREVIOUS="course_id" NEXT="title"/>
         <FIELD NAME="title" TYPE="char" LENGTH="255" NOTNULL="true" SEQUENCE="false" PREVIOUS="course_number" NEXT="year"/>
         <FIELD NAME="year" TYPE="int" LENGTH="4" NOTNULL="true" SEQUENCE="false" PREVIOUS="title" NEXT="semester"/>
@@ -51,7 +51,7 @@
       <FIELDS>
         <FIELD NAME="id" TYPE="int" LENGTH="10" NOTNULL="true" SEQUENCE="true" NEXT="section_no"/>
         <FIELD NAME="section_no" TYPE="char" LENGTH="7" NOTNULL="false" SEQUENCE="false" PREVIOUS="id" NEXT="master_syllabus_id"/>
-        <FIELD NAME="master_syllabus_id" TYPE="int" NOTNULL="true" SEQUENCE="false" PREVIOUS="section_no" NEXT="year"/>
+        <FIELD NAME="master_syllabus_id" TYPE="int" LENGTH="10" NOTNULL="true" SEQUENCE="false" PREVIOUS="section_no" NEXT="year"/>
         <FIELD NAME="year" TYPE="char" LENGTH="4" NOTNULL="true" SEQUENCE="false" PREVIOUS="master_syllabus_id" NEXT="semester"/>
         <FIELD NAME="semester" TYPE="char" LENGTH="255" NOTNULL="true" SEQUENCE="false" PREVIOUS="year" NEXT="instructor_name"/>
         <FIELD NAME="instructor_name" TYPE="char" LENGTH="245" NOTNULL="false" SEQUENCE="false" PREVIOUS="semester" NEXT="instructor_email"/>
