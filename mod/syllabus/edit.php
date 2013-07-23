@@ -260,6 +260,16 @@ if(empty($course)) {
                 
                     <button id="add-new-course-syllabus-button">Add New</button>
                     
+                    <table>
+                        <caption>Cloneable Syllabi</caption>
+                        <tr>
+                            <th>Section #</th>
+                            <th>Title</th>
+                            <th>Year/Sem</th>
+                            
+                        </tr>
+                    </table>
+                    
                     <table class="syllabus-table"><colgroup><col /><col /><col /><col /></colgroup>
                 
                 <tr class="heading"><th>Course</th><th>Year</th><th>Semester</th><th>Action</th></tr>
