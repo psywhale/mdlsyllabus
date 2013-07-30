@@ -16,7 +16,7 @@ $cloneCanidate[$syllabusid]->instance = $instance_id;
 
 
 
-print_r($cloneCanidate);
+//print_r($cloneCanidate);
 
 $DB->insert_record("course_syllabus", $cloneCanidate[$syllabusid]);
 
