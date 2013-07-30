@@ -493,6 +493,19 @@ Class attendance is a requirement to receive Title IV Federal Aid.   On-line stu
         <strong>SUBJECT TO CHANGE NOTICE</strong> <br/>This syllabus is subject to change at any point during the course. If changes are made to the syllabus, all affected students will be notified by the method(s) listed in the Syllabus Change Notification section.<br/><br/>
         <strong>SYLLABUS CHANGE NOTIFICATION METHOD</strong> $syllabus->notify_method
         <strong>COURSE COMPETENCIES</strong> $syllabus->course_competencies
+            
+<strong>THE LEARNING RESOURCES CENTER</strong><br/>
+<p>The Learning Resources Center (LRC) offers the following: online databases, E-books, periodicals, newspapers, in-house book collection, LibGuides, Interlibrary loans, and a photo and newspaper archive. Reference assistance is available in-person, by appointment and via Instant Messaging. Fax machines, copiers, a scanner, a big screen t.v. and two computers labs/group study rooms are available for use. If we do not have the items you need please submit an Interlibrary loans form located at <a href='http://www.wosc.edu/library'>www.wosc.edu/library</a>. Click on the link “Interlibrary Loan Request Form”.
+</p><p>
+To access the WOSC online card catalog and proprietary databases go to 
+<a href='http://wosc-verso.auto-graphics.com/homepages/myaccount.asp'>http://wosc-verso.auto-graphics.com/homepages/myaccount.asp</a>
+</p><p>
+Enter the following username and password.<br/>
+My Username: 29164000160540<br/>
+My Password: onlinewestern<br/>
+</p><p>
+Note: To checkout books and other physical materials students need to setup their own accounts by coming to the LRC circulation desk. Please bring your Greenbucks Card (Student ID) with you.
+</p>
 		</div> <!-- END <p> left margin -->
 
 <style TYPE=\"text/css\">
