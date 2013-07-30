@@ -170,7 +170,7 @@ if(empty($course)) {
                             
                             
                         </tr>
-                        <?php  echo syllabus_printCloneList($USER->email); ?>
+                        <?php  echo syllabus_printCloneList($USER->email,$course,$instance_id); ?>
                     </table>
                     
                     <table class="syllabus-table"><colgroup><col /><col /><col /><col /></colgroup>
@@ -285,7 +285,7 @@ if(empty($course)) {
                             
                             
                         </tr>
-                        <?php echo syllabus_printCloneList($USER->email); ?>
+                        <?php echo syllabus_printCloneList($USER->email,$course,$instance_id); ?>
                         
                     </table>
                     

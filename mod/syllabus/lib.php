@@ -330,23 +330,32 @@ function syllabus_course_has_selected ($syllabusid){
  * given logged in user's email get all other syllabus with that email
  * @param char $email 
  */
-function syllabus_printCloneList($email){
+function syllabus_printCloneList($email,$courseid,$instanceid){
     global $CFG,$DB;
     $html="";
     if($email) {
-        $result=$DB->get_records_sql("select * from {course_syllabus} where instructor_email = \"$email\"");
+        $result=$DB->get_records_sql("select {course_syllabus}.*,{master_syllabus}.title from {course_syllabus} inner join {master_syllabus} on {course_syllabus}.master_syllabus_id = {master_syllabus}.id where {course_syllabus}.instructor_email = \"$email\" and {course_syllabus}.instance  != \"$instanceid\"");
         if(empty($result)) {
             $html = "<tr><td colspan=4>No Cloneable Syllabi Found</td></tr>";
             return($html);
                     
         }else{
+            $i = 1;
+                    
             foreach($result as $key => $value){
-                $html .= "<tr>".
+                if($i % 2 ==0) {
+                    $html .="<tr class=\"alt\">";
+                }
+                else {
+                    $html .= "<tr>";
+                }
+                $html .=
                         "<td>$value->section_no</td>" .
-                        "<td>$value->section_no</td>" .
+                        "<td><a href=\"view.php?id=$value->instance\">$value->title</a></td>" .
                         "<td>$value->semester $value->year</td>" .
-                        "<td><button>Clone</button></td>" .
+                        "<td><button onclick='window.location=\"course-clone.php?cloneid=$value->id&course_id=$courseid&instance_id=$instanceid\"'>Clone</button></td>" .
                         "</tr>";
+                $i++;
             }
          return($html);
         }
