@@ -506,7 +506,21 @@ My Password: onlinewestern<br/>
 </p><p>
 Note: To checkout books and other physical materials students need to setup their own accounts by coming to the LRC circulation desk. Please bring your Greenbucks Card (Student ID) with you.
 </p>
-		</div> <!-- END <p> left margin -->
+<strong>PRACTICES FOR VERIFICATION OF STUDENT IDENTITY (Commission Policy FDCR.A.10.050)</strong>
+<p>In order to verify the identity of students who participate in class or coursework, the institution may make use of a variety of methods, including but not limited to: (1) secure login and pass code; (2) proctored examinations; and (3) new or other technologies and practices that are effective in verifying the identity of students. Such methods must have reasonable and appropriate safeguards to protect student privacy. The institution must notify students at the time of registration or enrollment of any projected additional student charges associated with the verification of student identity such as separate fees charged by proctoring services, etc.
+</p>
+<p>When a Western Oklahoma State College students enroll in an online course, their participation in the course is restricted until they retrieve login information from Campus Connect. Access to Campus Connect also requires a secure login and password. In addition, Western Oklahoma State College’s online courses require students to take exams via ProctorU or in an Oklahoma approved proctoring environment. Some courses with different forms of assessment utilize other means of student verification and will be explained and documented by the instructor.</p>
+<p>Students who do not reside in Oklahoma are required to use ProctorU for all proctored exams in online courses. Oklahoma residents may choose to take exams in an approved proctoring environment with instructor approval. For information about Western’s testing center, please visit the testing center website below.
+</p>
+<p>
+<a href=http://www.wosc.edu/index.php?page=proctored-exams>Click here for Western's Testing Center Website</a>
+</p>
+<p>
+ProctorU Service<br/>
+Using a webcam and a reliable high-speed internet connection, students can take exams anywhere within the required time the instructor has given to take the test.
+</p>
+
+</div> <!-- END <p> left margin -->
 
 <style TYPE=\"text/css\">
 #syllabus_container { padding: 20px 15px; margin: 15px auto; width: 90%; min-width: 500px; max-width: 1024px;
