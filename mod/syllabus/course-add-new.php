@@ -11,6 +11,12 @@ $syllabusid = $_POST['select-template'];
 
 require_login($course, true, NULL);
 
+
+$result = $DB->get_records_sql("SELECT shortname FROM {course} WHERE id = ?", array($course));
+foreach ($result as $key => $value) {
+    $courseShortname = $key;
+}
+
 if (isset($_POST['submit-add-new'])) {
     $course = $_GET['course'];
     $DB->insert_record("course_syllabus", $_POST);
@@ -60,7 +66,7 @@ global $CFG, $DB;
                         <label for="title">Course Title</label>
                         <input type="text" name="title" disabled="disabled" value="<?php echo $result[$syllabusid]->title; ?>" /><br />
                         <label for="section">Section*</label>
-                        <input class="required" type="text" maxlength="7" name="section_no" value="" /><br />
+                        <input class="required" type="text" maxlength="7" name="section_no" value="<?php echo $courseShortname; ?>" /><br />
                         <label for="year">Year</label>
                         <select name="year"><br/>
                         <?php 

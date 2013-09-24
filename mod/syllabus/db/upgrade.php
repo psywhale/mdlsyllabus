@@ -247,7 +247,18 @@ function xmldb_syllabus_upgrade($oldversion) {
         upgrade_mod_savepoint(true, 2013062400, 'syllabus');
     }
 
-     
+     if ($oldversion < 2013092401) {
+
+        // Changing type of field section_no on table course_syllabus to char
+        $table = new xmldb_table('course_syllabus');
+        $field = new xmldb_field('section_no', XMLDB_TYPE_CHAR, '12', null, null, null, null, 'id');
+
+        // Launch change of type for field section_no
+        $dbman->change_field_type($table, $field);
+
+        // syllabus savepoint reached
+        upgrade_mod_savepoint(true, 2013092401, 'syllabus');
+    }  
 
 
     return true;

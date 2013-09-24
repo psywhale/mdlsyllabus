@@ -11,6 +11,11 @@ $syllabusid = $_GET['syllabusid'];
 
 require_login($course, true, NULL);
 
+$result = $DB->get_records_sql("SELECT shortname FROM {course} WHERE id = ?", array($course));
+foreach ($result as $key => $value) {
+    $courseShortname = $key;
+}
+
 if (isset($_POST['submit-edit'])) {
     $course = $_GET['course_id'];
     $DB->update_record("course_syllabus", $_POST);

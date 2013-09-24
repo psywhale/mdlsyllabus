@@ -7,12 +7,16 @@ $instance_id = $_GET['instance_id'];
 $course = $_GET['course_id'];
 
 require_login($course, true, NULL);
-
+$result = $DB->get_records_sql("SELECT shortname FROM {course} WHERE id = ?", array($course));
+foreach ($result as $key => $value) {
+    $courseShortname = $key;
+}
 global $CFG, $DB;
 
 $cloneCanidate=$DB->get_records_sql("select * from {course_syllabus} where id = ?",array($syllabusid));
 
 $cloneCanidate[$syllabusid]->instance = $instance_id;
+$cloneCanidate[$syllabusid]->section_no = $courseShortname;
 
 
 
