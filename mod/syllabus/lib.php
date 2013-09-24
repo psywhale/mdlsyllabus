@@ -472,7 +472,7 @@ Class attendance is a requirement to receive Title IV Federal Aid.   On-line stu
            WOSC is committed to providing support services to physically and learning disabled students.  These services are guided by Section 504 of the Rehabilitation Act of 1973 and the Americans with Disabilities Act of 1990 which prohibits discrimination against otherwise qualified individuals with disabilities, and mandates that reasonable accommodations be made for such persons. <a href=\"http://www.wosc.edu/index.php?page=counseling\">Complete ADA Policy available</a> 
            <br/><br/>
         <strong>EMAILS</strong> <br/>
-            Please email the instructor with any concerns or questions about the course using the course email link inside Moodle. Always remember to be respectful and use appropriate language. All students should expect a response within an appropriate amount of time. (16 & 8 within 48 hours).
+            Please email the instructor with any concerns or questions about the course using the course email link inside Moodle. Always remember to be respectful and use appropriate language. All students should expect a response within an appropriate amount of time. (16 & 8 week courses should expect a response within a 48 hour window.)
         <br/><br/>
 
         <strong> NETIQUETTE: ETIQUETTE FOR COMMUNICATING ONLINE </strong> <br/>
