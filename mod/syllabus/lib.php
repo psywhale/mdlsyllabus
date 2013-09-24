@@ -450,6 +450,10 @@ function syllabus_print($syllabus) {
            A student may withdraw from one of more classes with an automatic grade of \"W\". Please read the complete withdraw policy located in <a href=\"http://www.wosc.edu/index.php?page=College-Catalog\">College Catalog</a>.
      
            <br/><br/>
+        <strong>TIME EXPECTATIONS FOR STUDENTS</strong> <br/>
+           For each hour a student attends class, a student is expected to spend an additional two hours to prepare for the course. For example, in a traditional 16-week course, a three-hour course will require three hours of class time and an additional six hours of preparation outside of class each week. A three-hour course offered in an eight-week format would require six hours of class per week and an additional 12 hours outside of class per week for the student to prepare the course. Students should keep this information in mind as they prepare their schedules.
+     
+           <br/><br/>
         <strong>STUDENT SERVICE INFORMATION</strong> <br/>
             <p>Western Oklahoma State College offers a variety of resources to ensure student success. Tutor.com is a free online tutoring service that can be accessed 24 hours a day through the online portal. Peer tutoring is offered in multiple subject areas and can be found in A-4. Students who qualify for WINDS (federally funded TRIO grant) can access professional tutors in SSC202. Virtual Western is an online orientation also found on the online portal. All of these services are free to Western students and can be instrumental in navigating the collegiate experience.</p>
             <p> For more information regarding these services visit the <a href=\"http://wosc.edu//index.php?page=peer-tutoring\">Tutoring web page</a>.</p>
