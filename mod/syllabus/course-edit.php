@@ -64,7 +64,7 @@ global $CFG, $DB;
                         <label for="title">Course Title</label>
                         <input type="text" name="title" disabled="disabled" value="<?php echo $masterresult[$mastersyllabusid]->title; ?>" /><br />
                         <label for="section">Section*</label>
-                        <input class="required" type="text" maxlength="7" name="section_no" value="<?php echo $result[$syllabusid]->section_no; ?>" /><br />
+                        <input class="required" type="text" maxlength="12" name="section_no" value="<?php echo $result[$syllabusid]->section_no; ?>" /><br />
                         <label for="year">Year</label>
                         <select name="year"><br/>
                         <?php 
