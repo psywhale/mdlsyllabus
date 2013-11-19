@@ -97,7 +97,12 @@ echo $OUTPUT->header();
                     $courseMoodleId=syllabus_course_has_selected($syllabusid);
                     
                     if($courseMoodleId) {
-                        $titlelink = "<a href=$CFG->wwwroot/course/view.php?id=$courseMoodleId>$title</a>";
+                        if($courseMoodleId->selected_course_syllabus == $syllabusid) {
+                            $titlelink = "<a href=$CFG->wwwroot/course/view.php?id=$courseMoodleId->course>$title</a>";
+                        }
+                        else {
+                            $titlelink = "<a href=$CFG->wwwroot/course/view.php?id=$courseMoodleId->course style=font-color:grey>$title</a>";
+                        }
                     }
                     else {
                         $titlelink = "<strike>$title</br> $courseMoodleId</strike>";

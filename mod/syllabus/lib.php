@@ -323,7 +323,7 @@ function syllabus_course_has_selected ($syllabusid){
         return false;
     }
     
-    return $result->course;
+    return $result;
 }
 
 /**
@@ -365,6 +365,16 @@ function syllabus_printCloneList($email,$courseid,$instanceid){
         return("<tr><td colspan=4>Email Fail</td></tr>");
     }
     
+    
+}
+
+/**
+ * check number of syllabii in class
+ */
+function numberofSyllabi($courseShortName) {
+    global $CFG,$DB;
+    $result = $DB->get_record_sql("select count(*) as number from {course_syllabus} where section_no = \"$courseShortName\"");
+    return $result->number;
     
 }
 

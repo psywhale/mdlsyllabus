@@ -156,7 +156,7 @@ if(empty($course)) {
 <div id="course-syllabus-body">
                 
                 <div class="syllabus-form-body" id="course-syllabus-view-all">
-                
+                <?php if(numberofSyllabi($COURSE->shortname)<1) { ?>
                     <button id="add-new-course-syllabus-button">Add New</button>
                     
                     <table class="syllabus-table">
@@ -172,7 +172,7 @@ if(empty($course)) {
                         </tr>
                         <?php  echo syllabus_printCloneList($USER->email,$course,$instance_id); ?>
                     </table>
-                    
+                <?php } ?>  
                     <table class="syllabus-table"><colgroup><col /><col /><col /><col /></colgroup>
                 
                 <tr class="heading"><th>Course</th><th>Year</th><th>Semester</th><th>Action</th></tr>
@@ -231,6 +231,7 @@ if(empty($course)) {
                     //  select which master syllabus to use as a template
                    $result = $DB->get_records_sql("SELECT id,course_number,title FROM {master_syllabus} order by {master_syllabus}.course_number ASC");
                    ?>
+        <?php if(numberofSyllabi($COURSE->shortname)<1) { ?>
                 <div class="syllabus-form-body" id="course-syllabus-add-new">
                     <p>Please select a master syllabus to use as a template:</p>
                     <form id="select-template" action="course-add-new.php?course_id=<?php echo $course; ?>&instance_id=<?php echo $instance_id; ?>" method="POST">
@@ -259,6 +260,7 @@ if(empty($course)) {
                         <input type="submit" name="submit" value="Select" /> <input id="course-add-new-cancel" type="submit" name="cancel" value="Cancel" />
                     </form>
                 </div>
+        <?php } ?>
                 </div>
                 
                 
@@ -271,7 +273,7 @@ if(empty($course)) {
                 
                 </div>
                 <div class="syllabus-form-body" id="course-syllabus-view-all">
-                
+                <?php if(numberofSyllabi($COURSE->shortname)<1) { ?>
                     <button id="add-new-course-syllabus-button">Add New</button>
                  
                     <table class="syllabus-table">
@@ -288,7 +290,7 @@ if(empty($course)) {
                         <?php echo syllabus_printCloneList($USER->email,$course,$instance_id); ?>
                         
                     </table>
-                    
+                <?php } ?>
                     <table class="syllabus-table"><colgroup><col /><col /><col /><col /></colgroup>
                 
                 <tr class="heading"><th>Course</th><th>Year</th><th>Semester</th><th>Action</th></tr>

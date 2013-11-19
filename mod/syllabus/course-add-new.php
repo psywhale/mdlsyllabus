@@ -58,6 +58,7 @@ global $CFG, $DB;
                 <span id="edit-master" class="syllabus-form-tab selected">Add New Course Syllabus</span>                 
                 </div>
 <div class="syllabus-form-body">
+    <?php if(numberofSyllabi($COURSE->shortname)<1) { ?>
                     <form id="course-add-new" action="course-add-new.php?course=<?php echo $course; ?>&instance_id=<?php echo $instance_id; ?>" method="POST">
                         <input type="hidden" name="master_syllabus_id" value="<?php echo $syllabusid; ?>" />
                         <input type="hidden" name="instance" value="<?php echo $instance_id; ?>" />
@@ -107,7 +108,7 @@ global $CFG, $DB;
                         <label for="instructor_name">Instructor Name*</label>
                         <input class="required" type="text" name="instructor_name" /><br />
                         <label for="instructor_email">Instructor Email*</label>
-                        <input class="required" type="text" name="instructor_email" /><br />
+                        <input class="required" type="text" name="instructor_email" value="<?php echo $USER->email; ?>"/><br />
                         <label for="instructor_phone">Instructor Phone</label>
                         <input type="text" name="instructor_phone" /><br />
                         <label for="instructor_hours" class="textarea">Instructor Information</label>
@@ -139,6 +140,7 @@ global $CFG, $DB;
                         <input type="submit" value="Add" name="submit-add-new"/> <input type="submit" value="Cancel" id="course-add-cancel" name="cancel" />
                     </form>
                     <p>* Required fields.<br/>** Optional Fields (leave blank if not required)</p>
+    <?php } else { echo "You already have a syllabus for this course";} ?>
 		</div>
                 
                 
