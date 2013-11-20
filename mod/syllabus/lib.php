@@ -325,7 +325,45 @@ function syllabus_course_has_selected ($syllabusid){
     
     return $result;
 }
-
+/**
+ * get column stuff
+ */
+function syllabus_columnDataGroups($column="id",$selected="") {
+    global $CFG,$DB;
+    switch ($column) {
+        case "year":
+            $s = "y";
+            break;
+        case "semester" :
+            $s = "s";
+            break;
+        case "section_no":
+            $s = "n";
+            break;
+        default:
+            return "null";
+            break;
+        
+    }
+    $sql = "SELECT  {course_syllabus}.$column as col from {course_syllabus} 
+                    group BY 
+                    {course_syllabus}.$column ASC";
+    $results = $DB->get_records_sql($sql);
+    $html = "<select style=\"width:100px\"onchange=\"updatefilter(this,'$s')\">";
+    $html .= "<option></option>";
+    foreach ($results as $key => $value) {
+        if($value->col == $selected) {
+            $selected = "SELECTED";
+        }else {$selected = "";}
+        
+          $html .= "<option $selected>$value->col</option>";
+     }
+     $html .= "</select>";
+    return $html;
+    
+    
+    
+}
 /**
  * given logged in user's email get all other syllabus with that email
  * @param char $email 

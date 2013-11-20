@@ -7,6 +7,22 @@ require_once("lib.php");
 
 $id = optional_param('id',0,PARAM_INT);    // Course Module ID, or
 //$l = optional_param('l',0,PARAM_INT);     // Syllabus ID
+$Filter = array();
+$yearFilter = optional_param('y',0,PARAM_ALPHANUM);
+$semesterFilter = optional_param('s',0,PARAM_ALPHANUM);
+$sectionFilter = optional_param('n',0,PARAM_ALPHANUM);
+$Filter["y"] = $yearFilter;
+$Filter["s"] = $semesterFilter;
+$Filter["n"] = $sectionFilter;
+
+// if no filter vars clean filter array 
+foreach ($Filter as $key => $value) {
+    if (empty($value)) {
+        unset($Filter[$key]);
+    }
+    
+}
+
 $course = $_GET['course'];
 $instance_id = $id;
 global $DB, $CFG;
@@ -53,17 +69,51 @@ echo $OUTPUT->header();
 <div class="syllabus-form-body">
     <table class="syllabus-table"><colgroup><col /><col /><col /><col /><col /><col /></colgroup>
                 
-                <tr class="heading"><th>Course</th><th>Section</th><th>Title</th><th>Year</th><th>Semester</th><th>Action</th></tr>
+        <tr class="heading"><th>Course Number</th><th>Section<br/><?php echo syllabus_columnDataGroups("section_no",$Filter["n"]);?></th><th>Title</th><th>Year<br/><?php echo syllabus_columnDataGroups("year",$Filter["y"]);?></th><th>Semester<br/><?php echo syllabus_columnDataGroups("semester",$Filter["s"]);?></th><th>Action</th></tr>
                 <?php
                 //Get all records from course_syllabus that were created for this instance 
-                $result = $DB->get_records_sql('SELECT {course_syllabus}.id,
+                $sql = 'SELECT {course_syllabus}.id,
                     {master_syllabus}.course_id, {master_syllabus}.course_number,
                     {master_syllabus}.title,{course_syllabus}.instance,
                     {course_syllabus}.year, {course_syllabus}.semester, {course_syllabus}.section_no 
                     FROM {course_syllabus} JOIN {master_syllabus} ON 
-                    {course_syllabus}.master_syllabus_id = {master_syllabus}.id 
+                    {course_syllabus}.master_syllabus_id = {master_syllabus}.id';
+                if(!empty($Filter)){
+                    $sql .=" where ";
+                    $counter = 1;
+                    foreach($Filter as $key => $value) {
+                        if($counter >1) {
+                            if($counter <= count($Filter)) {
+                                $sql .= " and ";
+                            }
+                        }
+                        switch ($key) {
+                            case "y":
+                                $sql .= "{course_syllabus}.year =\"$value\" ";
+                                $counter++;
+                                var_dump($counter);
+                                break;
+                            case "s":
+                                $sql .= "{course_syllabus}.semester =\"$value\" ";
+                                $counter++;
+                                var_dump($counter);
+                                break;
+                            case "n":
+                                $sql .= "{course_syllabus}.section_no =\"$value\" ";
+                                $counter++;
+                                var_dump($counter);
+                                break;
+
+                            default:
+                                break;
+                        }
+                    }
+                }
+                $sql .=' 
                     ORDER BY 
-                    {master_syllabus}.course_number ASC');
+                    {master_syllabus}.course_number ASC';
+                
+                $result = $DB->get_records_sql($sql);
                 // get the selected course syllabus for this instance
                 
                 
@@ -145,3 +195,5 @@ echo $OUTPUT->header();
                 ?>
     </table>
 </div>
+<?php echo $OUTPUT->footer(); ?>
+    
