@@ -116,13 +116,3 @@ foreach($ids as $key => $value) {
 });
 
 
-function updatefilter(selector,style) {
-  var criteria = selector.options[selector.selectedIndex].value;
-  var queryStart = document.URL.indexOf("&") + 1;
-  var queryEnd   = document.URL.indexOf("#") + 1 || document.URL.length + 1;
-  var url      = document.URL.slice(0, queryStart - 1);
-  var query      = document.URL.slice(queryStart, queryEnd - 1);
-  console.log("url = "+url);
-  
-  window.location = url + "&" + style +"=" + criteria;
-}

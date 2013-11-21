@@ -349,14 +349,15 @@ function syllabus_columnDataGroups($column="id",$selected="") {
                     group BY 
                     {course_syllabus}.$column ASC";
     $results = $DB->get_records_sql($sql);
-    $html = "<select style=\"width:100px\"onchange=\"updatefilter(this,'$s')\">";
+    $html = "<select style=\"width:100px\" onchange=\"updatefilter(this,'$s')\">";
     $html .= "<option></option>";
+    $derp = "";
     foreach ($results as $key => $value) {
         if($value->col == $selected) {
-            $selected = "SELECTED";
-        }else {$selected = "";}
+            $derp = "SELECTED";
+        }else {$derp = "";}
         
-          $html .= "<option $selected>$value->col</option>";
+          $html .= "<option $derp>$value->col</option>";
      }
      $html .= "</select>";
     return $html;

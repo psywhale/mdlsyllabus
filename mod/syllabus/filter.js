@@ -39,7 +39,7 @@ function updatefilter(selector,style) {
       for( z in params) {
          if( !(params[z] === undefined)) {
              if(params[z] != ""){
-                 console.log(params[z]);
+    //             console.log(params[z]);
                  newQuery = newQuery + "&" + z + "=" + params[z];
              }
          }
@@ -48,12 +48,13 @@ function updatefilter(selector,style) {
       //window.location.assign(newQuery);
      
   }
-  
+ /* 
   console.log("url = "+url);
   console.dir(params);
   console.log("qstart = "+queryStart);
   console.log("newQ = "+newQuery);
   console.log(url+ "&"+ style +"=" + criteria);
+  */
   if(FLAG === true){
       window.location = newQuery;
   }

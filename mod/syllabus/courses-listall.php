@@ -46,6 +46,7 @@ $PAGE->requires->js('/mod/syllabus/jquery.js', true);
 $PAGE->requires->js('/mod/syllabus/validator.js', true);
 
 $PAGE->requires->js('/mod/syllabus/js.php', true);
+$PAGE->requires->js('/mod/syllabus/filter.js', true);
 
 $PAGE->requires->css('/mod/syllabus/style.css');
 
@@ -64,6 +65,7 @@ $PAGE->set_pagelayout('course');
 
 // Output starts here
 echo $OUTPUT->header();
+//var_dump($Filter);
 ?>
 
 <div class="syllabus-form-body">
@@ -91,17 +93,17 @@ echo $OUTPUT->header();
                             case "y":
                                 $sql .= "{course_syllabus}.year =\"$value\" ";
                                 $counter++;
-                                var_dump($counter);
+                                
                                 break;
                             case "s":
                                 $sql .= "{course_syllabus}.semester =\"$value\" ";
                                 $counter++;
-                                var_dump($counter);
+                                
                                 break;
                             case "n":
                                 $sql .= "{course_syllabus}.section_no =\"$value\" ";
                                 $counter++;
-                                var_dump($counter);
+                             
                                 break;
 
                             default:
