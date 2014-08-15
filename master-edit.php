@@ -92,11 +92,7 @@ global $CFG, $DB;
                         <?php print_textarea(1, 25, 65, 400, 300, 'attendance_policy', $value); ?><br />
                         
                         
-                        
-                        <label for="course_competencies" class="textarea">Course Competencies</label>
-                        <?php $value = $result[$syllabusid]->course_competencies; ?>
-                        <?php print_textarea(1, 25, 65, 400, 300, 'course_competencies', $value); ?><br />
-                        
+                      
                         <label for="assessment" class="textarea">Course Assessment (Evaluation)<br/>(Template
                             <?php syllabus_helper("Template", get_string("SyllabusTemplateHelp","syllabus"))?>)</label>
                         <?php $value = $result[$syllabusid]->assessment; ?>
