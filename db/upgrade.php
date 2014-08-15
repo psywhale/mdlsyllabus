@@ -259,6 +259,21 @@ function xmldb_syllabus_upgrade($oldversion) {
         // syllabus savepoint reached
         upgrade_mod_savepoint(true, 2013092401, 'syllabus');
     }  
+    
+    if ($oldversion < 2014081552) {
+
+        // Define field course_competencies to be dropped from master_syllabus.
+        $table = new xmldb_table('master_syllabus');
+        $field = new xmldb_field('course_competencies');
+
+        // Conditionally launch drop field course_competencies.
+        if ($dbman->field_exists($table, $field)) {
+            $dbman->drop_field($table, $field);
+        }
+
+        // Syllabus savepoint reached.
+        upgrade_mod_savepoint(true, 2014081552, 'syllabus');
+    }
 
 
     return true;

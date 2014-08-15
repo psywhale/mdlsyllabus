@@ -544,8 +544,8 @@ Class attendance is a requirement to receive Title IV Federal Aid.   On-line stu
         <br/><br/>
 
         <strong>SUBJECT TO CHANGE NOTICE</strong> <br/>This syllabus is subject to change at any point during the course. If changes are made to the syllabus, all affected students will be notified by the method(s) listed in the Syllabus Change Notification section.<br/><br/>
-        <strong>SYLLABUS CHANGE NOTIFICATION METHOD</strong> $syllabus->notify_method
-        <strong>COURSE COMPETENCIES</strong> $syllabus->course_competencies
+        <strong>SYLLABUS CHANGE NOTIFICATION METHOD</strong> $syllabus->notify_method <br/>
+        
             
 <strong>THE LEARNING RESOURCES CENTER</strong><br/>
 <p>The Learning Resources Center (LRC) offers the following: online databases, E-books, periodicals, newspapers, in-house book collection, LibGuides, Interlibrary loans, and a photo and newspaper archive. Reference assistance is available in-person, by appointment and via Instant Messaging. Fax machines, copiers, a scanner, a big screen t.v. and two computers labs/group study rooms are available for use. If we do not have the items you need please submit an Interlibrary loans form located at <a href='http://www.wosc.edu/library'>www.wosc.edu/library</a>. Click on the link “Interlibrary Loan Request Form”.
