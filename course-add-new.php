@@ -109,10 +109,11 @@ global $CFG, $DB;
                         <input class="required" type="text" name="instructor_name" /><br />
                         <label for="instructor_email">Instructor Email*</label>
                         <input class="required" type="text" name="instructor_email" value="<?php echo $USER->email; ?>"/><br />
-                        <label for="instructor_phone">Instructor Phone</label>
-                        <input type="text" name="instructor_phone" /><br />
+                        <label for="instructor_phone">Instructor Phone*</label>
+                        <input class="required" type="text" name="instructor_phone" /><br />
                         <label for="instructor_hours" class="textarea">Instructor Information</label>
-                        <?php print_textarea(1, 25, 65, 200, 300, 'instructor_hours'); ?><br />
+                        <!--print_textarea($unused, $rows, $cols, $width, $height, $name, $value='', $obsolete=0, $return=false, $id='')-->
+                        <?php print_textarea(1, 25, 65, 200, 300, 'instructor_hours class="required"'); ?><br />
                         <label for="textbook" class="textarea">Textbook</label>
                         <?php print_textarea(1, 25, 65, 200, 300, 'textbook'); ?><br />
                         
