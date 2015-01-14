@@ -77,7 +77,7 @@ global $CFG, $DB;
                         <?php $value = $result[$syllabusid]->catalog_desc; ?>
                         <?php print_textarea(1, 25, 65, 400, 300, 'catalog_desc', $value); ?><br />
                         
-                        <label for="learning_outcomes" class="textarea">Learning Outcomes</label>
+                        <label for="learning_outcomes" class="textarea">Learning Outcomes and Unit Objectives</label>
                         <?php $value = $result[$syllabusid]->learning_outcomes; ?>
                         <?php print_textarea(1, 25, 65, 400, 300, 'learning_outcomes', $value); ?><br />
                         
