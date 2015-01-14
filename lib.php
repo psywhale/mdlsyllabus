@@ -145,7 +145,7 @@ function syllabus_update_instance($syllabus) {
 function syllabus_delete_instance($id) {
     global $DB;
 
-    if (! $syllabus = $DB->get_record("syllabus", array("id"=>$id))) {
+   /* if (! $syllabus = $DB->get_record("syllabus", array("id"=>$id))) {
         return false;
     }
 
@@ -154,8 +154,10 @@ function syllabus_delete_instance($id) {
     if (! $DB->delete_records("syllabus", array("id"=>$syllabus->id))) {
         $result = false;
     }
+    */
+    notice("undeletable");    error("lkasdf");
 
-    return $result;
+    return FALSE;
 }
 
 /**
@@ -464,20 +466,51 @@ function syllabus_print($syllabus) {
             </tr>
         </table>   
 <hr style=\"color: #555 !important;\" > 
-		<div style=\"margin-left: 8px;\"> <!-- START <p> left margin -->
-        <strong>INSTRUCTOR INFORMATION</strong> $syllabus->instructor_hours        
-        <strong>PREREQUISITES</strong> $syllabus->prerequisites
-        <strong>COREQUISITES</strong> $syllabus->corequisites
-        <strong>CATALOG DESCRIPTION</strong> $syllabus->catalog_desc
-        <strong>TEXTBOOK</strong> $syllabus->textbook";
+		<div style=\"margin-left: 8px;\"> <!-- START <p> left margin -->";
+
+
+
+
+   if ($syllabus->instructor_hours != "") {
+       $syllabus_html .= "<strong>INSTRUCTOR INFORMATION</strong> $syllabus->instructor_hours";
+   }
+
+
+   if ($syllabus->prerequisites != "") {
+       $syllabus_html .= "<strong>PREREQUISITES</strong> $syllabus->prerequisites";
+   }
+
+
+   if ($syllabus->corequisites != "") {
+       $syllabus_html .= "<strong>COREQUISITES</strong> $syllabus->corequisites";
+   }
+
+
+   if ($syllabus->catalog_desc != "") {
+       $syllabus_html .= "<strong>CATALOG DESCRIPTION</strong> $syllabus->catalog_desc";
+   }
+
+
+   if ($syllabus->textbook != "") {
+       $syllabus_html .= "<strong>TEXTBOOK</strong> $syllabus->textbook";
+   }
+
+
+
+
    if($syllabus->supplies != "") {
        $syllabus_html .= "<strong>SUPPLIES</strong> $syllabus->supplies";
    }
    
-        $syllabus_html .= "    
         
-        <strong>LEARNING OUTCOMES</strong> $syllabus->learning_outcomes
-        ";
+        
+   if($syllabus->learning_outcomes != "") {
+       $syllabus_html .= "<strong>LEARNING OUTCOMES AND UNIT OBJECTIVES</strong> $syllabus->learning_outcomes";
+   }
+
+
+
+
    if($syllabus->getting_started != "") {
        $syllabus_html .= "<strong>GETTING STARTED WITH THIS COURSE</strong> $syllabus->getting_started";
    }
@@ -487,15 +520,31 @@ function syllabus_print($syllabus) {
    if($syllabus->format_purpose != "") {
        $syllabus_html .= "<strong>COURSE STRUCTURE AND PURPOSE</strong> $syllabus->format_purpose";
    }
-   $syllabus_html .= "   
-        <strong>ATTENDANCE POLICY</strong> $syllabus->attendance_policy
-        <strong>GRADING SCALE</strong> $syllabus->grading_policy
-        <strong>ACADEMIC ETHICS</strong> <br />Western Oklahoma State College is committed to instilling and upholding integrity as a core value. All members of the Western Oklahoma State College community are entrusted with academic integrity, which encompasses the fundamental values of honesty, trust, respect, fairness, and responsibility. Western is devoted to maintaining an honest academic environment and ensures fair resolution of alleged violations of academic integrity.
+   $syllabus_html .= "";   
+   if($syllabus->attendance_policy != "") {
+       $syllabus_html .= "<strong>ATTENDANCE POLICY</strong> $syllabus->attendance_policy";
+   }
+   
+   if($syllabus->grading_policy != "") {
+       $syllabus_html .= "<strong>GRADING SCALE</strong> $syllabus->grading_policy";
+   }
+
+$syllabus_html .= "
+   <strong>ACADEMIC ETHICS</strong> <br />Western Oklahoma State College is committed to instilling and upholding integrity as a core value. All members of the Western Oklahoma State College community are entrusted with academic integrity, which encompasses the fundamental values of honesty, trust, respect, fairness, and responsibility. Western is devoted to maintaining an honest academic environment and ensures fair resolution of alleged violations of academic integrity.
         <a href=\"http://wosc.edu//index.php?page=academic-integrity-policy\"> Complete Integrity Policy available here... </a> <br/><br/>
         <strong>WESTERN'S ASSESSMENT POLICY</strong> <br />An important part of Western’s “commitment to excellence” is the systematic collection and examination of assessment data both to document and to improve student learning. Instructors and students will be asked to participate in assessment activities as a part of the course work. The results of assessment benefit students by identifying how competently they perform course goals as well as benefiting the college by confirming Western’s performance as an institution of higher education. <br/><br/>
-        <strong>COURSE ASSESSMENT (Evaluation)</strong> $syllabus->assessment
-        <strong>ADDITIONAL INFO</strong> $syllabus->additional_info
-        <strong>WITHDRAW POLICY</strong> <br/>
+        ";
+if($syllabus->assessment != "") {
+    $syllabus_html .= "<strong>COURSE ASSESSMENT (Evaluation)</strong> $syllabus->assessment";
+}
+
+
+if ($syllabus->additional_info != "") {
+    $syllabus_html .= "<strong>ADDITIONAL INFO</strong> $syllabus->additional_info";
+}
+
+$syllabus_html .= "
+<strong>WITHDRAW POLICY</strong> <br/>
            A student may withdraw from one of more classes with an automatic grade of \"W\". Please read the complete withdraw policy located in <a href=\"http://www.wosc.edu/index.php?page=College-Catalog\">College Catalog</a>.
      
            <br/><br/>
@@ -543,10 +592,17 @@ Class attendance is a requirement to receive Title IV Federal Aid.   On-line stu
 </ul></p>
         <br/><br/>
 
-        <strong>SUBJECT TO CHANGE NOTICE</strong> <br/>This syllabus is subject to change at any point during the course. If changes are made to the syllabus, all affected students will be notified by the method(s) listed in the Syllabus Change Notification section.<br/><br/>
-        <strong>SYLLABUS CHANGE NOTIFICATION METHOD</strong> $syllabus->notify_method <br/>
-        
-            
+        <strong>SUBJECT TO CHANGE NOTICE</strong> <br/>This syllabus is subject to change at any point during the course. If changes are made to the syllabus, all affected students will be notified by the method(s) listed in the Syllabus Change Notification section.<br/><br/>";
+
+if($syllabus->notify_method != "") {
+   $syllabus_html .= "<strong>SYLLABUS CHANGE NOTIFICATION METHOD</strong> $syllabus->notify_method <br/>";
+  }
+
+
+
+
+
+$syllabus_html .= "
 <strong>THE LEARNING RESOURCES CENTER</strong><br/>
 <p>The Learning Resources Center (LRC) offers the following: online databases, E-books, periodicals, newspapers, in-house book collection, LibGuides, Interlibrary loans, and a photo and newspaper archive. Reference assistance is available in-person, by appointment and via Instant Messaging. Fax machines, copiers, a scanner, a big screen t.v. and two computers labs/group study rooms are available for use. If we do not have the items you need please submit an Interlibrary loans form located at <a href='http://www.wosc.edu/library'>www.wosc.edu/library</a>. Click on the link “Interlibrary Loan Request Form”.
 </p><p>
