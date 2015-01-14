@@ -505,7 +505,7 @@ function syllabus_print($syllabus) {
         
         
    if($syllabus->learning_outcomes != "") {
-       $syllabus_html .= "<strong>LEARNING OUTCOMES</strong> $syllabus->learning_outcomes";
+       $syllabus_html .= "<strong>LEARNING OUTCOMES AND UNIT OBJECTIVES</strong> $syllabus->learning_outcomes";
    }
 
 

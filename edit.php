@@ -130,7 +130,7 @@ if(empty($course)) {
                         <?php print_textarea(1, 25, 65, 400, 300, 'corequisites'); ?><br />
                         <label for="catalog_desc" class="textarea">Catalog Description</label>
                         <?php print_textarea(1, 25, 65, 400, 300, 'catalog_desc'); ?><br />
-                        <label for="learning_outcomes" class="textarea">Learning Outcomes</label>
+                        <label for="learning_outcomes" class="textarea">Learning Outcomes and Unit Objectives</label>
                         <?php print_textarea(1, 25, 65, 400, 300, 'learning_outcomes'); ?><br />
                         <label for="course_requirements" class="textarea">Course Requirements</br>(Template
                             <?php syllabus_helper("Template", get_string("SyllabusTemplateHelp","syllabus"))?>)</label>
