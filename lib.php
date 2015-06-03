@@ -607,7 +607,7 @@ $syllabus_html .= "
 <p>The Learning Resources Center (LRC) offers the following: online databases, E-books, periodicals, newspapers, in-house book collection, LibGuides, Interlibrary loans, and a photo and newspaper archive. Reference assistance is available in-person, by appointment and via Instant Messaging. Fax machines, copiers, a scanner, a big screen t.v. and two computers labs/group study rooms are available for use. If we do not have the items you need please submit an Interlibrary loans form located at <a href='http://www.wosc.edu/library'>www.wosc.edu/library</a>. Click on the link “Interlibrary Loan Request Form”.
 </p><p>
 To access the WOSC online card catalog and proprietary databases go to 
-<a href='http://wosc-verso.auto-graphics.com/homepages/myaccount.asp'>http://wosc-verso.auto-graphics.com/homepages/myaccount.asp</a>
+<a href='http://links.wosc.edu/verso'>http://links.wosc.edu/verso</a>
 </p><p>
 Enter the following username and password.<br/>
 My Username: 29164000160540<br/>
@@ -618,14 +618,14 @@ Note: To checkout books and other physical materials students need to setup thei
 <strong>PRACTICES FOR VERIFICATION OF STUDENT IDENTITY (Commission Policy FDCR.A.10.050)</strong>
 <p>In order to verify the identity of students who participate in class or coursework, the institution may make use of a variety of methods, including but not limited to: (1) secure login and pass code; (2) proctored examinations; and (3) new or other technologies and practices that are effective in verifying the identity of students. Such methods must have reasonable and appropriate safeguards to protect student privacy. The institution must notify students at the time of registration or enrollment of any projected additional student charges associated with the verification of student identity such as separate fees charged by proctoring services, etc.
 </p>
-<p>When a Western Oklahoma State College students enroll in an online course, their participation in the course is restricted until they retrieve login information from Campus Connect. Access to Campus Connect also requires a secure login and password. In addition, Western Oklahoma State College’s online courses require students to take exams via ProctorU or in an Oklahoma approved proctoring environment. Some courses with different forms of assessment utilize other means of student verification and will be explained and documented by the instructor.</p>
-<p>Students who do not reside in Oklahoma are required to use ProctorU for all proctored exams in online courses. Oklahoma residents may choose to take exams in an approved proctoring environment with instructor approval. For information about Western’s testing center, please visit the testing center website below.
+<p>When a Western Oklahoma State College students enroll in an online course, their participation in the course is restricted until they retrieve login information from Campus Connect. Access to Campus Connect also requires a secure login and password. In addition, Western Oklahoma State College’s online courses require students to take exams via Online Proctoring Service or in an Oklahoma approved proctoring environment. Some courses with different forms of assessment utilize other means of student verification and will be explained and documented by the instructor.</p>
+<p>Students who do not reside in Oklahoma are required to use the Online Proctoring Service for all proctored exams in online courses. Oklahoma residents may choose to take exams in an approved proctoring environment with instructor approval. For information about Western’s testing center, please visit the testing center website below.
 </p>
 <p>
 <a href=http://www.wosc.edu/index.php?page=proctored-exams>Click here for Western's Testing Center Website</a>
 </p>
 <p>
-ProctorU Service<br/>
+Online Proctoring Services<br/>
 Using a webcam and a reliable high-speed internet connection, students can take exams anywhere within the required time the instructor has given to take the test.
 </p>
 
