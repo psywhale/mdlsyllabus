@@ -41,7 +41,7 @@ $PAGE->set_url('/mod/syllabus/public-view.php', array('course'=>$course));
 
 $PAGE->set_title('Course Syllabus');
 
-$PAGE->set_pagelayout('course');
+$PAGE->set_pagelayout('print');
 
 $PAGE->set_heading('Course Syllabus');
 
